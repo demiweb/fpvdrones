@@ -1608,6 +1608,9 @@
         font-size: 0.6771vw;
         line-height: 140%;
         color: #FFFFFF;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
