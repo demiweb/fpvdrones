@@ -119,9 +119,12 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        background: rgba(255, 255, 255, 0);
+        transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
 
         &:hover {
-          text-decoration: underline;
+          background: $main-color;
+          color: #fff;
         }
       }
     }
@@ -225,6 +228,7 @@
         transform: scale(1.06);
         filter: invert(34%) sepia(99%) saturate(6896%) hue-rotate(222deg) brightness(105%) contrast(105%);
       }
+
       span {
         color: #fff;
         background: $main-color;
@@ -647,15 +651,19 @@
   justify-content: space-between;
   margin-bottom: 3.1250vw;
 }
+
 .swiper-wrapper {
   align-items: stretch;
+
   .swiper-slide {
     height: auto;
   }
+
   .single-product {
     height: 100%;
   }
 }
+
 .single-product {
   width: 25%;
   display: flex;
