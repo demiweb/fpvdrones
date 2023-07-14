@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body class="home">
+
+<header class="header">
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top__cont">
+
+                <div class="header-top__left">
+
+                    <div class="header-top__menu">
+                        <span>корисна інформація</span>
+
+                        <div class="header-top__menu-block">
+                            <ul>
+                                <li><a href="">О нас</a></li>
+                                <li><a href="">Наши магазины</a></li>
+                                <li><a href="">Контакты</a></li>
+                                <li><a href="">Оплата и доставка</a></li>
+                                <li><a href="">Обмен и возврат</a></li>
+                                <li><a href="">Размерная сетка обуви</a></li>
+                                <li><a href="">Как оформить заказ?</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div class="header-top__menu">
+                        <span>UA</span>
+
+                        <div class="header-top__menu-block">
+                            <ul>
+                                <li><a href="">RU</a></li>
+                                <li><a href="">ENG</a></li>
+                                <li><a href="">GER</a></li>
+                                <li><a href="">FR</a></li>
+                                <li><a href="">ESP</a></li>
+                                <li><a href="">ITA</a></li>
+                                <li><a href="">CN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <p>Безкоштовна доставка при оплаті онлайн від 1000 грн</p>
+                <div class="header-top__right">
+                    <a href="" class="tel">0 800 444 33 22</a>
+                    <div class="header-top__socs">
+                        <a href="" >
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.2 0.0837402H0.8C0.3575 0.0837402 0 0.44124 0 0.88374V19.2837C0 19.7262 0.3575 20.0837 0.8 20.0837H19.2C19.6425 20.0837 20 19.7262 20 19.2837V0.88374C20 0.44124 19.6425 0.0837402 19.2 0.0837402ZM16.89 5.92124H15.2925C14.04 5.92124 13.7975 6.51624 13.7975 7.39124V9.31874H16.7875L16.3975 12.3362H13.7975V20.0837H10.68V12.3387H8.0725V9.31874H10.68V7.09374C10.68 4.51124 12.2575 3.10374 14.5625 3.10374C15.6675 3.10374 16.615 3.18624 16.8925 3.22374V5.92124H16.89Z" />
+                            </svg>
+
+                        </a>
+                        <a href="" >
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.9157 6.66525C9.07947 6.66525 7.58096 8.16376 7.58096 10C7.58096 11.8362 9.07947 13.3348 10.9157 13.3348C12.752 13.3348 14.2505 11.8362 14.2505 10C14.2505 8.16376 12.752 6.66525 10.9157 6.66525ZM20.9175 10C20.9175 8.61907 20.93 7.25064 20.8524 5.87221C20.7749 4.27113 20.4096 2.85017 19.2388 1.67938C18.0655 0.506085 16.6471 0.14334 15.046 0.065788C13.6651 -0.0117644 12.2966 0.000744113 10.9182 0.000744113C9.53728 0.000744113 8.16886 -0.0117644 6.79043 0.065788C5.18934 0.14334 3.76838 0.508587 2.59759 1.67938C1.4243 2.85267 1.06155 4.27113 0.984001 5.87221C0.906449 7.25314 0.918957 8.62157 0.918957 10C0.918957 11.3784 0.906449 12.7494 0.984001 14.1278C1.06155 15.7289 1.4268 17.1498 2.59759 18.3206C3.77088 19.4939 5.18934 19.8567 6.79043 19.9342C8.17136 20.0118 9.53978 19.9993 10.9182 19.9993C12.2991 19.9993 13.6676 20.0118 15.046 19.9342C16.6471 19.8567 18.0681 19.4914 19.2388 18.3206C20.4121 17.1473 20.7749 15.7289 20.8524 14.1278C20.9325 12.7494 20.9175 11.3809 20.9175 10ZM10.9157 15.131C8.07629 15.131 5.78475 12.8394 5.78475 10C5.78475 7.16058 8.07629 4.86903 10.9157 4.86903C13.7551 4.86903 16.0467 7.16058 16.0467 10C16.0467 12.8394 13.7551 15.131 10.9157 15.131ZM16.2568 5.8572C15.5939 5.8572 15.0585 5.32184 15.0585 4.65889C15.0585 3.99594 15.5939 3.46058 16.2568 3.46058C16.9198 3.46058 17.4551 3.99594 17.4551 4.65889C17.4553 4.81631 17.4245 4.97222 17.3643 5.1177C17.3042 5.26317 17.2159 5.39535 17.1046 5.50666C16.9933 5.61798 16.8611 5.70624 16.7156 5.76639C16.5702 5.82654 16.4142 5.8574 16.2568 5.8572Z"
+                                      />
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="header-bot">
+        <div class="container">
+            <div class="header-bot__cont">
+
+                <div class="logo">
+                    <a href="">
+                        <img src="./img/logon1.svg" alt="">
+                    </a>
+                </div>
+
+
+                <div class="header-hidden">
+                    <div class="header-menu">
+                        <ul>
+                            <li class="menu-item-has-children">
+                                <a href="">Дрони </a>
+
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="">Комлектуючі</a>
+
+                            </li>
+                            <li>
+                                <a href="">Аксесуари та інше </a>
+                            </li>
+                            <li>
+                                <a href="">Батареї</a>
+                            </li>
+                            <li>
+                                <a href="">Пульти та модулі</a>
+                            </li>
+                            <li >
+                                <a href="">FPV очки </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="header-top__menu">
+                        <span>корисна інформація</span>
+
+                        <div class="header-top__menu-block">
+                            <ul>
+                                <li><a href="">О нас</a></li>
+                                <li><a href="">Наши магазины</a></li>
+                                <li><a href="">Контакты</a></li>
+                                <li><a href="">Оплата и доставка</a></li>
+                                <li><a href="">Обмен и возврат</a></li>
+                                <li><a href="">Размерная сетка обуви</a></li>
+                                <li><a href="">Как оформить заказ?</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="header-top__right">
+                        <a href="" class="tel">0 800 444 33 22</a>
+                        <div class="header-top__socs">
+                            <a href="" >
+                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.2 0.0837402H0.8C0.3575 0.0837402 0 0.44124 0 0.88374V19.2837C0 19.7262 0.3575 20.0837 0.8 20.0837H19.2C19.6425 20.0837 20 19.7262 20 19.2837V0.88374C20 0.44124 19.6425 0.0837402 19.2 0.0837402ZM16.89 5.92124H15.2925C14.04 5.92124 13.7975 6.51624 13.7975 7.39124V9.31874H16.7875L16.3975 12.3362H13.7975V20.0837H10.68V12.3387H8.0725V9.31874H10.68V7.09374C10.68 4.51124 12.2575 3.10374 14.5625 3.10374C15.6675 3.10374 16.615 3.18624 16.8925 3.22374V5.92124H16.89Z" />
+                                </svg>
+
+                            </a>
+                            <a href="" >
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.9157 6.66525C9.07947 6.66525 7.58096 8.16376 7.58096 10C7.58096 11.8362 9.07947 13.3348 10.9157 13.3348C12.752 13.3348 14.2505 11.8362 14.2505 10C14.2505 8.16376 12.752 6.66525 10.9157 6.66525ZM20.9175 10C20.9175 8.61907 20.93 7.25064 20.8524 5.87221C20.7749 4.27113 20.4096 2.85017 19.2388 1.67938C18.0655 0.506085 16.6471 0.14334 15.046 0.065788C13.6651 -0.0117644 12.2966 0.000744113 10.9182 0.000744113C9.53728 0.000744113 8.16886 -0.0117644 6.79043 0.065788C5.18934 0.14334 3.76838 0.508587 2.59759 1.67938C1.4243 2.85267 1.06155 4.27113 0.984001 5.87221C0.906449 7.25314 0.918957 8.62157 0.918957 10C0.918957 11.3784 0.906449 12.7494 0.984001 14.1278C1.06155 15.7289 1.4268 17.1498 2.59759 18.3206C3.77088 19.4939 5.18934 19.8567 6.79043 19.9342C8.17136 20.0118 9.53978 19.9993 10.9182 19.9993C12.2991 19.9993 13.6676 20.0118 15.046 19.9342C16.6471 19.8567 18.0681 19.4914 19.2388 18.3206C20.4121 17.1473 20.7749 15.7289 20.8524 14.1278C20.9325 12.7494 20.9175 11.3809 20.9175 10ZM10.9157 15.131C8.07629 15.131 5.78475 12.8394 5.78475 10C5.78475 7.16058 8.07629 4.86903 10.9157 4.86903C13.7551 4.86903 16.0467 7.16058 16.0467 10C16.0467 12.8394 13.7551 15.131 10.9157 15.131ZM16.2568 5.8572C15.5939 5.8572 15.0585 5.32184 15.0585 4.65889C15.0585 3.99594 15.5939 3.46058 16.2568 3.46058C16.9198 3.46058 17.4551 3.99594 17.4551 4.65889C17.4553 4.81631 17.4245 4.97222 17.3643 5.1177C17.3042 5.26317 17.2159 5.39535 17.1046 5.50666C16.9933 5.61798 16.8611 5.70624 16.7156 5.76639C16.5702 5.82654 16.4142 5.8574 16.2568 5.8572Z"
+                                    />
+                                </svg>
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="header-top__menu">
+                        <span>UA</span>
+
+                        <div class="header-top__menu-block menu-langs">
+                            <ul>
+                                <li><a href="">RU</a></li>
+                                <li><a href="">ENG</a></li>
+                                <li><a href="">GER</a></li>
+                                <li><a href="">FR</a></li>
+                                <li><a href="">ESP</a></li>
+                                <li><a href="">ITA</a></li>
+                                <li><a href="">CN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="header-controls">
+                    <div class="search-block">
+                        <img src="./img/src-ic.svg" alt="">
+                    </div>
+                    <a href="" class="fav-block no-empty">
+                        <img src="./img/fv-ic.svg" alt="">
+                        <span>2</span>
+                    </a>
+                    <a href="" class="cart-block no-empty btn-mod" data-mod="cart">
+                        <img src="./img/cart-ic.svg" alt="">
+                        <span>3</span>
+                    </a>
+                    <a href="" class="acc-block">
+                        <img src="./img/acc-ic.svg" alt="">
+                    </a>
+                </div>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</header>
+<main>
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><span>Category</span></li>
+                </ul>
+            </div>
+
+            <div class="auth-container">
+                <div class="title-head">
+                    <span class="title">Особистий кабінет</span>
+                    <a href="" class="btn btn--fill">Вийти</a>
+                </div>
+
+
+                <div class="personal-wrapper">
+                    <div class="personal-top">
+                        <a href="" class="personal-link ">
+                            <div class="img">
+                                <img src="./img/pa1.svg" alt="">
+                            </div>
+                            <p>Особисті данні</p>
+                        </a>
+                        <a href="" class="personal-link active">
+                            <div class="img">
+                                <img src="./img/pa2.svg" alt="">
+                            </div>
+                            <p>Ваші замовлення</p>
+                        </a>
+                        <a href="" class="personal-link ">
+                            <div class="img">
+                                <img src="./img/pa3.svg" alt="">
+                            </div>
+                            <p>Зміна паролю</p>
+                        </a>
+                        <a href="" class="personal-link">
+                            <div class="img">
+                                <img src="./img/pa4.svg" alt="">
+                            </div>
+                            <p>Обране</p>
+                        </a>
+                        <a href="" class="personal-link ">
+                            <div class="img">
+                                <img src="./img/pa5.svg" alt="">
+                            </div>
+                            <p>Підписка на розсилку</p>
+                        </a>
+                    </div>
+                    <div class="personal-center">
+                        <span class="title">Ваші замовлення</span>
+
+                        <div class="orders-empty">
+                            <p>Не може бути! Ваш список замовлень порожній.</p>
+                            <a href="" class="btn btn--fill">Перейти до покупок</a>
+                        </div>
+
+                        <div class="orders-container">
+                            <div class="orders-head">
+                                <div class="orders-item">
+                                    #
+                                </div>
+                                <div class="orders-item">
+                                    Товари
+                                </div>
+                                <div class="orders-item">
+                                    Дата
+                                </div>
+                                <div class="orders-item">
+                                    Вартість
+                                </div>
+                                <div class="orders-item">
+                                    Статус
+                                </div>
+                            </div>
+
+                            <div class="single-order">
+                                <div class="single-order__head open">
+                                    <div class="orders-item">
+                                        <strong>1776</strong>
+                                    </div>
+                                    <div class="orders-item">
+                                        <!--       if amount of items > 6, add class 'maximum-limit'          -->
+                                        <div class="orders-mini-images maximum-limit">
+                                            <div class="imgs">
+                                                <div class="img">
+                                                    <img class="lazyload" data-src="./img/prd-1.png" alt="">
+                                                </div>
+                                                <div class="img">
+                                                    <img class="lazyload" data-src="./img/prd-2.png" alt="">
+                                                </div>
+                                                <div class="img">
+                                                    <img class="lazyload" data-src="./img/prd-3.png" alt="">
+                                                </div>
+                                                <div class="img">
+                                                    <img class="lazyload" data-src="./img/prd-4.png" alt="">
+                                                </div>
+                                                <div class="img">
+                                                    <img class="lazyload" data-src="./img/prd-1.png" alt="">
+                                                </div>
+                                                <div class="img">
+                                                    <img class="lazyload" data-src="./img/prd-2.png" alt="">
+                                                </div>
+                                                <div class="img">
+                                                    <img class="lazyload" data-src="./img/prd-2.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="more-img">
+                                                <p>+1</p>
+                                            </div>
+                                        </div>
+                                        <p class="for-open">Товари:</p>
+                                    </div>
+                                    <div class="orders-item">
+                                        22.05.2023
+                                    </div>
+                                    <div class="orders-item">
+                                        <strong>123650 грн</strong>
+                                    </div>
+                                    <div class="orders-item">
+                                        <div class="status" style="--col1: #6E81BE;">
+                                            <img src="./img/stat1.svg" alt="">
+                                            <p>В обробці</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="single-order__content">
+
+                                    <div class="single-order__main">
+                                        <div class="single-order__single">
+                                            <a href="" class="img">
+                                                <img src="./img/prd-1.png" alt="">
+                                            </a>
+                                            <div class="txt">
+                                                <div class="lft">
+                                                    <a href="">Meteor75 Pro Brushless Whoop Quadcopter (1S HD Digital
+                                                        VTX)</a>
+                                                    <span>Caddx HD Digital VTX</span>
+                                                </div>
+                                                <div class="rght">
+                                                    <p>15400 грн</p>
+                                                    <span>1 шт</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="single-order__single">
+                                            <a href="" class="img">
+                                                <img src="./img/prd-1.png" alt="">
+                                            </a>
+                                            <div class="txt">
+                                                <div class="lft">
+                                                    <a href="">Meteor75 Pro Brushless Whoop Quadcopter (1S HD Digital
+                                                        VTX)</a>
+                                                    <span>Caddx HD Digital VTX</span>
+                                                </div>
+                                                <div class="rght">
+                                                    <p>15400 грн</p>
+                                                    <span>1 шт</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="single-order__single">
+                                            <a href="" class="img">
+                                                <img src="./img/prd-1.png" alt="">
+                                            </a>
+                                            <div class="txt">
+                                                <div class="lft">
+                                                    <a href="">Meteor75 Pro Brushless Whoop Quadcopter (1S HD Digital
+                                                        VTX)</a>
+                                                    <span>Caddx HD Digital VTX</span>
+                                                </div>
+                                                <div class="rght">
+                                                    <p>15400 грн</p>
+                                                    <span>1 шт</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="single-order-total">
+                                            <span>Разом:</span>
+                                            <p>123650 грн</p>
+                                        </div>
+                                    </div>
+                                    <div class="single-order__bot">
+                                        <div class="single-order__bot-col">
+                                            <span>Дані клієнта:</span>
+
+                                            <div class="single-order__bot-row">
+                                                <div class="txt">
+                                                    <p>Ротаковський Володимир</p>
+                                                    <span>+38 097 887 6000</span>
+                                                    <a href="">test@gmail.com</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="single-order__bot-col">
+                                            <span>Спосіб та адреса доставки:</span>
+
+                                            <div class="single-order__bot-row">
+                                                <div class="img">
+                                                    <img src="./img/np-1.png" alt="">
+                                                </div>
+                                                <div class="txt">
+                                                    <p>Нова пошта</p>
+                                                    <span>м. Одеса, Відділення 123</span>
+                                                    <span><strong>45436645645645</strong></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="single-order__bot-col">
+                                            <span>Спосіб оплати:</span>
+
+                                            <div class="single-order__bot-row">
+                                                <div class="img">
+                                                    <img src="./img/vis-1.png" alt="">
+                                                </div>
+                                                <div class="txt">
+                                                    <span>Онлайн оплата Visa/Mastercard</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="single-order">
+                                <div class="single-order__head ">
+                                    <div class="orders-item">
+                                        <strong>1776</strong>
+                                    </div>
+                                    <div class="orders-item">
+                                        <!--       if amount of items > 6, add class 'maximum-limit'          -->
+                                        <div class="orders-mini-images">
+                                            <div class="imgs">
+                                                <div class="img">
+                                                    <img class="lazyload" data-src="./img/prd-1.png" alt="">
+                                                </div>
+                                                <div class="img">
+                                                    <img class="lazyload" data-src="./img/prd-2.png" alt="">
+                                                </div>
+                                                <div class="img">
+                                                    <img class="lazyload" data-src="./img/prd-3.png" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="more-img">
+                                                <p>+1</p>
+                                            </div>
+                                        </div>
+                                        <p class="for-open">Товари:</p>
+                                    </div>
+                                    <div class="orders-item">
+                                        22.05.2023
+                                    </div>
+                                    <div class="orders-item">
+                                        <strong>123650 грн</strong>
+                                    </div>
+                                    <div class="orders-item">
+                                        <div class="status" style="--col1: #3BAD08;">
+                                            <img src="./img/stat2.svg" alt="">
+                                            <p>Доставлено</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="single-order__content">
+
+                                    <div class="single-order__main">
+                                        <div class="single-order__single">
+                                            <a href="" class="img">
+                                                <img src="./img/prd-1.png" alt="">
+                                            </a>
+                                            <div class="txt">
+                                                <div class="lft">
+                                                    <a href="">Meteor75 Pro Brushless Whoop Quadcopter (1S HD Digital
+                                                        VTX)</a>
+                                                    <span>Caddx HD Digital VTX</span>
+                                                </div>
+                                                <div class="rght">
+                                                    <p>15400 грн</p>
+                                                    <span>1 шт</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="single-order__single">
+                                            <a href="" class="img">
+                                                <img src="./img/prd-1.png" alt="">
+                                            </a>
+                                            <div class="txt">
+                                                <div class="lft">
+                                                    <a href="">Meteor75 Pro Brushless Whoop Quadcopter (1S HD Digital
+                                                        VTX)</a>
+                                                    <span>Caddx HD Digital VTX</span>
+                                                </div>
+                                                <div class="rght">
+                                                    <p>15400 грн</p>
+                                                    <span>1 шт</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="single-order__single">
+                                            <a href="" class="img">
+                                                <img src="./img/prd-1.png" alt="">
+                                            </a>
+                                            <div class="txt">
+                                                <div class="lft">
+                                                    <a href="">Meteor75 Pro Brushless Whoop Quadcopter (1S HD Digital
+                                                        VTX)</a>
+                                                    <span>Caddx HD Digital VTX</span>
+                                                </div>
+                                                <div class="rght">
+                                                    <p>15400 грн</p>
+                                                    <span>1 шт</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="single-order-total">
+                                            <span>Разом:</span>
+                                            <p>123650 грн</p>
+                                        </div>
+                                    </div>
+                                    <div class="single-order__bot">
+                                        <div class="single-order__bot-col">
+                                            <span>Дані клієнта:</span>
+
+                                            <div class="single-order__bot-row">
+                                                <div class="txt">
+                                                    <p>Ротаковський Володимир</p>
+                                                    <span>+38 097 887 6000</span>
+                                                    <a href="">test@gmail.com</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="single-order__bot-col">
+                                            <span>Спосіб та адреса доставки:</span>
+
+                                            <div class="single-order__bot-row">
+                                                <div class="img">
+                                                    <img src="./img/np-1.png" alt="">
+                                                </div>
+                                                <div class="txt">
+                                                    <p>Нова пошта</p>
+                                                    <span>м. Одеса, Відділення 123</span>
+                                                    <span><strong>45436645645645</strong></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="single-order__bot-col">
+                                            <span>Спосіб оплати:</span>
+
+                                            <div class="single-order__bot-row">
+                                                <div class="img">
+                                                    <img src="./img/vis-1.png" alt="">
+                                                </div>
+                                                <div class="txt">
+                                                    <span>Онлайн оплата Visa/Mastercard</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="single-order">
+                                <div class="single-order__head ">
+                                    <div class="orders-item">
+                                        <strong>1776</strong>
+                                    </div>
+                                    <div class="orders-item">
+                                        <!--       if amount of items > 6, add class 'maximum-limit'          -->
+                                        <div class="orders-mini-images">
+                                            <div class="imgs">
+                                                <div class="img">
+                                                    <img class="lazyload" data-src="./img/prd-1.png" alt="">
+                                                </div>
+
+                                                <div class="img">
+                                                    <img class="lazyload" data-src="./img/prd-2.png" alt="">
+                                                </div>
+                                                <div class="img">
+                                                    <img class="lazyload" data-src="./img/prd-2.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="more-img">
+                                                <p>+1</p>
+                                            </div>
+                                        </div>
+                                        <p class="for-open">Товари:</p>
+                                    </div>
+                                    <div class="orders-item">
+                                        22.05.2023
+                                    </div>
+                                    <div class="orders-item">
+                                        <strong>123650 грн</strong>
+                                    </div>
+                                    <div class="orders-item">
+                                        <div class="status" style="--col1: #C72A2A;">
+                                            <img src="./img/stat3.svg" alt="">
+                                            <p>В дорозі</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="single-order__content">
+
+                                    <div class="single-order__main">
+                                        <div class="single-order__single">
+                                            <a href="" class="img">
+                                                <img src="./img/prd-1.png" alt="">
+                                            </a>
+                                            <div class="txt">
+                                                <div class="lft">
+                                                    <a href="">Meteor75 Pro Brushless Whoop Quadcopter (1S HD Digital
+                                                        VTX)</a>
+                                                    <span>Caddx HD Digital VTX</span>
+                                                </div>
+                                                <div class="rght">
+                                                    <p>15400 грн</p>
+                                                    <span>1 шт</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="single-order__single">
+                                            <a href="" class="img">
+                                                <img src="./img/prd-1.png" alt="">
+                                            </a>
+                                            <div class="txt">
+                                                <div class="lft">
+                                                    <a href="">Meteor75 Pro Brushless Whoop Quadcopter (1S HD Digital
+                                                        VTX)</a>
+                                                    <span>Caddx HD Digital VTX</span>
+                                                </div>
+                                                <div class="rght">
+                                                    <p>15400 грн</p>
+                                                    <span>1 шт</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="single-order__single">
+                                            <a href="" class="img">
+                                                <img src="./img/prd-1.png" alt="">
+                                            </a>
+                                            <div class="txt">
+                                                <div class="lft">
+                                                    <a href="">Meteor75 Pro Brushless Whoop Quadcopter (1S HD Digital
+                                                        VTX)</a>
+                                                    <span>Caddx HD Digital VTX</span>
+                                                </div>
+                                                <div class="rght">
+                                                    <p>15400 грн</p>
+                                                    <span>1 шт</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="single-order-total">
+                                            <span>Разом:</span>
+                                            <p>123650 грн</p>
+                                        </div>
+                                    </div>
+                                    <div class="single-order__bot">
+                                        <div class="single-order__bot-col">
+                                            <span>Дані клієнта:</span>
+
+                                            <div class="single-order__bot-row">
+                                                <div class="txt">
+                                                    <p>Ротаковський Володимир</p>
+                                                    <span>+38 097 887 6000</span>
+                                                    <a href="">test@gmail.com</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="single-order__bot-col">
+                                            <span>Спосіб та адреса доставки:</span>
+
+                                            <div class="single-order__bot-row">
+                                                <div class="img">
+                                                    <img src="./img/np-1.png" alt="">
+                                                </div>
+                                                <div class="txt">
+                                                    <p>Нова пошта</p>
+                                                    <span>м. Одеса, Відділення 123</span>
+                                                    <span><strong>45436645645645</strong></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="single-order__bot-col">
+                                            <span>Спосіб оплати:</span>
+
+                                            <div class="single-order__bot-row">
+                                                <div class="img">
+                                                    <img src="./img/vis-1.png" alt="">
+                                                </div>
+                                                <div class="txt">
+                                                    <span>Онлайн оплата Visa/Mastercard</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="pagination">
+                                <ul>
+                                    <li><a href="" class="prev">›</a></li>
+                                    <li><a href="">1</a></li>
+                                    <li><span class="current">2</span></li>
+                                    <li><a href="">3</a></li>
+                                    <li><a href="">4</a></li>
+                                    <li><span class="more">...</span></li>
+                                    <li><a href="">15</a></li>
+                                    <li><a href="" class="next">›</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="main-bonuses">
+        <div class="container">
+            <div class="main-bonuses__cont anim" data-anim-delay="0" data-anim-duration="860"
+                 data-anim="fade-up">
+                <div class="single-bonuses anim" data-anim-delay="0" data-anim-duration="860"
+                     data-anim="fade-up">
+                    <div class="img">
+                        <img src="./img/bon-1.svg" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>Технічна пітдримка</span>
+                        <p>Для вашого спокою доступна гарантія на місці до 3 років.</p>
+                    </div>
+                </div>
+                <div class="single-bonuses anim" data-anim-delay="0" data-anim-duration="860"
+                     data-anim="fade-up">
+                    <div class="img">
+                        <img src="./img/bon-2.svg" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>Широкий асортимент</span>
+                        <p>Відкрийте для себе всі наші продукти та аксесуари, у тому числі ексклюзивні товари</p>
+                    </div>
+                </div>
+                <div class="single-bonuses anim" data-anim-delay="0" data-anim-duration="860"
+                     data-anim="fade-up">
+                    <div class="img">
+                        <img src="./img/bon-3.svg" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>Знижки та купони</span>
+                        <p>Знижки до 70% на нові продукти, ви можете бути впевнені в найкращій ціні.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+
+            <div class="footer-subscribe">
+                <div class="txt">
+                    <span>Підпишіться на нашу розсилку</span>
+                    <p>Будьте першим, хто дізнається про нові пропозиції</p>
+
+                </div>
+                <div class="right">
+                    <div class="form-subscribe">
+                        <form action="">
+                            <div class="input-wrap">
+                                <input type="email" placeholder="Ваш Email">
+                            </div>
+                            <button class="btn btn--fill">Підписатись</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer-menus">
+                <div class="footer-column">
+                    <span>Інформація</span>
+                    <ul>
+                        <li><a href="">Сервіс</a></li>
+                        <li><a href="">Про нас</a></li>
+                        <li><a href="">Доставки та оплата</a></li>
+                        <li><a href="">Умови повернення</a></li>
+                        <li><a href="">Гарантія на товар</a></li>
+                        <li><a href="">Контакти</a></li>
+                        <li><a href="">Мапа сайту</a></li>
+                        <li><a href="">Умови угоди та обробки даних</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <span>Каталог</span>
+                    <ul>
+                        <li><a href="">Дрони</a></li>
+                        <li><a href="">Комплектуючі</a></li>
+                        <li><a href="">Аксесуари та інше</a></li>
+                        <li><a href="">Батареї</a></li>
+                        <li><a href="">Пульти та модулі</a></li>
+                        <li><a href="">FPV очки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <span>Комплектуючі</span>
+                    <ul>
+                        <li><a href="">Польотні контролери</a></li>
+                        <li><a href="">Мотори</a></li>
+                        <li><a href="">Регулятори швидкості ESC</a></li>
+                        <li><a href="">Радіо передатчики</a></li>
+                        <li><a href="">Відео передатчики</a></li>
+                        <li><a href="">Камери</a></li>
+                        <li><a href="">Рами</a></li>
+                        <li><a href="">GPS модулі</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <span>Аксесуари та інше</span>
+                    <ul>
+                        <li><a href="">Пропелери</a></li>
+                        <li><a href="">Антени</a></li>
+                        <li><a href="">Метизи (болти та гайки)</a></li>
+                        <li><a href="">Гумові вироби та затяжки</a></li>
+                        <li><a href="">Дроти та конектори</a></li>
+                        <li><a href="">Перешкоди</a></li>
+                        <li><a href="">Зарядні пристрої</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <span>Контакти магазину</span>
+                    <p>Адреса: м. Одесса, вул. Тестова 15</p>
+                    <p>Тел: <a href="">(097) 888 33 22</a></p>
+                    <p>Графік роботи: Пн-Пт: 9:00 - 18:30</p>
+                    <p>E-mail: <a href="mailto:shop@email.com">shop@email.com</a></p>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="footer-bot">
+            <div class="header-top__socs">
+                <a href="">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.2 0.0837402H0.8C0.3575 0.0837402 0 0.44124 0 0.88374V19.2837C0 19.7262 0.3575 20.0837 0.8 20.0837H19.2C19.6425 20.0837 20 19.7262 20 19.2837V0.88374C20 0.44124 19.6425 0.0837402 19.2 0.0837402ZM16.89 5.92124H15.2925C14.04 5.92124 13.7975 6.51624 13.7975 7.39124V9.31874H16.7875L16.3975 12.3362H13.7975V20.0837H10.68V12.3387H8.0725V9.31874H10.68V7.09374C10.68 4.51124 12.2575 3.10374 14.5625 3.10374C15.6675 3.10374 16.615 3.18624 16.8925 3.22374V5.92124H16.89Z"/>
+                    </svg>
+
+                </a>
+                <a href="">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9157 6.66525C9.07947 6.66525 7.58096 8.16376 7.58096 10C7.58096 11.8362 9.07947 13.3348 10.9157 13.3348C12.752 13.3348 14.2505 11.8362 14.2505 10C14.2505 8.16376 12.752 6.66525 10.9157 6.66525ZM20.9175 10C20.9175 8.61907 20.93 7.25064 20.8524 5.87221C20.7749 4.27113 20.4096 2.85017 19.2388 1.67938C18.0655 0.506085 16.6471 0.14334 15.046 0.065788C13.6651 -0.0117644 12.2966 0.000744113 10.9182 0.000744113C9.53728 0.000744113 8.16886 -0.0117644 6.79043 0.065788C5.18934 0.14334 3.76838 0.508587 2.59759 1.67938C1.4243 2.85267 1.06155 4.27113 0.984001 5.87221C0.906449 7.25314 0.918957 8.62157 0.918957 10C0.918957 11.3784 0.906449 12.7494 0.984001 14.1278C1.06155 15.7289 1.4268 17.1498 2.59759 18.3206C3.77088 19.4939 5.18934 19.8567 6.79043 19.9342C8.17136 20.0118 9.53978 19.9993 10.9182 19.9993C12.2991 19.9993 13.6676 20.0118 15.046 19.9342C16.6471 19.8567 18.0681 19.4914 19.2388 18.3206C20.4121 17.1473 20.7749 15.7289 20.8524 14.1278C20.9325 12.7494 20.9175 11.3809 20.9175 10ZM10.9157 15.131C8.07629 15.131 5.78475 12.8394 5.78475 10C5.78475 7.16058 8.07629 4.86903 10.9157 4.86903C13.7551 4.86903 16.0467 7.16058 16.0467 10C16.0467 12.8394 13.7551 15.131 10.9157 15.131ZM16.2568 5.8572C15.5939 5.8572 15.0585 5.32184 15.0585 4.65889C15.0585 3.99594 15.5939 3.46058 16.2568 3.46058C16.9198 3.46058 17.4551 3.99594 17.4551 4.65889C17.4553 4.81631 17.4245 4.97222 17.3643 5.1177C17.3042 5.26317 17.2159 5.39535 17.1046 5.50666C16.9933 5.61798 16.8611 5.70624 16.7156 5.76639C16.5702 5.82654 16.4142 5.8574 16.2568 5.8572Z"
+                        />
+                    </svg>
+                </a>
+
+            </div>
+            <div class="pay-cards">
+                <img src="./img/pp-ic.svg" alt="">
+                <img src="./img/vis-ic.svg" alt="">
+                <img src="./img/ms-ic.svg" alt="">
+
+            </div>
+            <p class="copyr">Copyright © 2023</p>
+        </div>
+    </div>
+</footer>
+<div class="modal-window" data-modal="login" style="display: none">
+    <div class="backplate">
+
+    </div>
+    <div class="modal-container">
+        <div class="modal-head">
+            <p>Увійти</p>
+            <div class="modal-close">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="modal-cont">
+            <div class="form form-login">
+                <form action="">
+                    <div class="input-wrap">
+                        <label for="">Електронна пошта чи телефон</label>
+                        <input type="text" value="youremail@gmail.com">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="">Пароль</label>
+                        <input type="password" placeholder="">
+                    </div>
+
+                    <a href="" class="forgot-pass">Забули пароль?</a>
+
+                    <button class="btn btn--tel">увійти</button>
+                </form>
+
+                <p class="txt-no">Ще не маєте акаунту?</p>
+
+                <a href="" class="to-cart btn-mod" data-mod="register">зареєструватися</a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="modal-window" data-modal="register" style="display: none">
+    <div class="backplate">
+
+    </div>
+    <div class="modal-container">
+        <div class="modal-head">
+            <p>Зареєструватися</p>
+            <div class="modal-close">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="modal-cont">
+            <div class="form form-login">
+                <form action="">
+                    <div class="input-wrap">
+                        <label for="">Електронна пошта чи телефон</label>
+                        <input type="text" value="youremail@gmail.com">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="">Пароль</label>
+                        <input type="password" placeholder="">
+                    </div>
+
+                    <button class="btn btn--tel">зареєструватися</button>
+                </form>
+
+            </div>
+            <p class="rules">Створюючи профіль ви погоджуєтеся з <a href="">Умовами використання</a></p>
+
+
+        </div>
+    </div>
+</div>
+<div class="modal-window" data-modal="call" style="display: none">
+    <div class="backplate">
+
+    </div>
+    <div class="modal-container">
+        <div class="modal-head">
+            <p>Замовлення зворотнього дзвінка</p>
+            <div class="modal-close">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="modal-cont">
+            <div class="form">
+                <form action="">
+                    <div class="input-wrap">
+                        <input type="text" placeholder="Ваше ім'я *">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" placeholder="Ваш номер телефону *">
+                    </div>
+
+                    <button class="btn btn--tel">замовити дзвiнок</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal-window modal-cart" data-modal="cart">
+    <div class="backplate">
+
+    </div>
+    <div class="modal-container">
+        <div class="modal-head">
+            <p>Ваш кошик <strong>(23)</strong></p>
+            <div class="modal-close">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="modal-cont">
+
+            <div class="cart-modal">
+                <div class="cart-items">
+                    <div class="single-cart">
+                        <a href="" class="img">
+                            <img src="./img/prd-2.png" alt="">
+                        </a>
+                        <div class="txt">
+                            <div class="tp">
+                                <a href="">Meteor75 Pro Brushless Whoop Quadcopter</a>
+                                <span>ELRS 2.4G</span>
+                            </div>
+                            <div class="bt">
+
+                                <div class="quantity-field">
+                                    <div class="quantity__button quantity__button--minus js-minus">
+                                        <button type="button" class="">-</button>
+                                    </div>
+                                    <div class="quantity">
+                                        <label class="screen-reader-text"
+                                               for="quantity_649be09daaa16"></label> <input
+                                            type="number" id="quantity_649be09daaa16"
+                                            class="input-text qty text"
+                                            name="" value="1"
+                                            size="4" min="0" max="1" step="1"
+                                            placeholder="" inputmode="numeric" autocomplete="off">
+                                    </div>
+                                    <div class="quantity__button quantity__button--plus js-plus">
+                                        <button type="button" class="">+</button>
+                                    </div>
+                                </div>
+
+                                <p>2 159 грн</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-cart">
+                        <a href="" class="img">
+                            <img src="./img/prd-2.png" alt="">
+                        </a>
+                        <div class="txt">
+                            <div class="tp">
+                                <a href="">Meteor75 Pro Brushless Whoop Quadcopter</a>
+                                <span>ELRS 2.4G</span>
+                            </div>
+                            <div class="bt">
+
+                                <div class="quantity-field">
+                                    <div class="quantity__button quantity__button--minus js-minus">
+                                        <button type="button" class="">-</button>
+                                    </div>
+                                    <div class="quantity">
+                                        <label class="screen-reader-text"
+                                               for="quantity_649be09daaa16"></label> <input
+                                            type="number" id="quantity_649be09daaa16"
+                                            class="input-text qty text"
+                                            name="" value="1"
+                                            size="4" min="0" max="1" step="1"
+                                            placeholder="" inputmode="numeric" autocomplete="off">
+                                    </div>
+                                    <div class="quantity__button quantity__button--plus js-plus">
+                                        <button type="button" class="">+</button>
+                                    </div>
+                                </div>
+
+                                <p>2 159 грн</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-cart">
+                        <a href="" class="img">
+                            <img src="./img/prd-2.png" alt="">
+                        </a>
+                        <div class="txt">
+                            <div class="tp">
+                                <a href="">Meteor75 Pro Brushless Whoop Quadcopter</a>
+                                <span>ELRS 2.4G</span>
+                            </div>
+                            <div class="bt">
+
+                                <div class="quantity-field">
+                                    <div class="quantity__button quantity__button--minus js-minus">
+                                        <button type="button" class="">-</button>
+                                    </div>
+                                    <div class="quantity">
+                                        <label class="screen-reader-text"
+                                               for="quantity_649be09daaa16"></label> <input
+                                            type="number" id="quantity_649be09daaa16"
+                                            class="input-text qty text"
+                                            name="" value="1"
+                                            size="4" min="0" max="1" step="1"
+                                            placeholder="" inputmode="numeric" autocomplete="off">
+                                    </div>
+                                    <div class="quantity__button quantity__button--plus js-plus">
+                                        <button type="button" class="">+</button>
+                                    </div>
+                                </div>
+
+                                <p>2 159 грн</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-cart">
+                        <a href="" class="img">
+                            <img src="./img/prd-2.png" alt="">
+                        </a>
+                        <div class="txt">
+                            <div class="tp">
+                                <a href="">Meteor75 Pro Brushless Whoop Quadcopter</a>
+                                <span>ELRS 2.4G</span>
+                            </div>
+                            <div class="bt">
+
+                                <div class="quantity-field">
+                                    <div class="quantity__button quantity__button--minus js-minus">
+                                        <button type="button" class="">-</button>
+                                    </div>
+                                    <div class="quantity">
+                                        <label class="screen-reader-text"
+                                               for="quantity_649be09daaa16"></label> <input
+                                            type="number" id="quantity_649be09daaa16"
+                                            class="input-text qty text"
+                                            name="" value="1"
+                                            size="4" min="0" max="1" step="1"
+                                            placeholder="" inputmode="numeric" autocomplete="off">
+                                    </div>
+                                    <div class="quantity__button quantity__button--plus js-plus">
+                                        <button type="button" class="">+</button>
+                                    </div>
+                                </div>
+
+                                <p>2 159 грн</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-cart">
+                        <a href="" class="img">
+                            <img src="./img/prd-2.png" alt="">
+                        </a>
+                        <div class="txt">
+                            <div class="tp">
+                                <a href="">Meteor75 Pro Brushless Whoop Quadcopter</a>
+                                <span>ELRS 2.4G</span>
+                            </div>
+                            <div class="bt">
+
+                                <div class="quantity-field">
+                                    <div class="quantity__button quantity__button--minus js-minus">
+                                        <button type="button" class="">-</button>
+                                    </div>
+                                    <div class="quantity">
+                                        <label class="screen-reader-text"
+                                               for="quantity_649be09daaa16"></label> <input
+                                            type="number" id="quantity_649be09daaa16"
+                                            class="input-text qty text"
+                                            name="" value="1"
+                                            size="4" min="0" max="1" step="1"
+                                            placeholder="" inputmode="numeric" autocomplete="off">
+                                    </div>
+                                    <div class="quantity__button quantity__button--plus js-plus">
+                                        <button type="button" class="">+</button>
+                                    </div>
+                                </div>
+
+                                <p>2 159 грн</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-cart">
+                        <a href="" class="img">
+                            <img src="./img/prd-2.png" alt="">
+                        </a>
+                        <div class="txt">
+                            <div class="tp">
+                                <a href="">Meteor75 Pro Brushless Whoop Quadcopter</a>
+                                <span>ELRS 2.4G</span>
+                            </div>
+                            <div class="bt">
+
+                                <div class="quantity-field">
+                                    <div class="quantity__button quantity__button--minus js-minus">
+                                        <button type="button" class="">-</button>
+                                    </div>
+                                    <div class="quantity">
+                                        <label class="screen-reader-text"
+                                               for="quantity_649be09daaa16"></label> <input
+                                            type="number" id="quantity_649be09daaa16"
+                                            class="input-text qty text"
+                                            name="" value="1"
+                                            size="4" min="0" max="1" step="1"
+                                            placeholder="" inputmode="numeric" autocomplete="off">
+                                    </div>
+                                    <div class="quantity__button quantity__button--plus js-plus">
+                                        <button type="button" class="">+</button>
+                                    </div>
+                                </div>
+
+                                <p>2 159 грн</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-cart">
+                        <a href="" class="img">
+                            <img src="./img/prd-2.png" alt="">
+                        </a>
+                        <div class="txt">
+                            <div class="tp">
+                                <a href="">Meteor75 Pro Brushless Whoop Quadcopter</a>
+                                <span>ELRS 2.4G</span>
+                            </div>
+                            <div class="bt">
+
+                                <div class="quantity-field">
+                                    <div class="quantity__button quantity__button--minus js-minus">
+                                        <button type="button" class="">-</button>
+                                    </div>
+                                    <div class="quantity">
+                                        <label class="screen-reader-text"
+                                               for="quantity_649be09daaa16"></label> <input
+                                            type="number" id="quantity_649be09daaa16"
+                                            class="input-text qty text"
+                                            name="" value="1"
+                                            size="4" min="0" max="1" step="1"
+                                            placeholder="" inputmode="numeric" autocomplete="off">
+                                    </div>
+                                    <div class="quantity__button quantity__button--plus js-plus">
+                                        <button type="button" class="">+</button>
+                                    </div>
+                                </div>
+
+                                <p>2 159 грн</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="cart-total">
+                    <span>Разом</span>
+                    <p>7 248 грн</p>
+                </div>
+
+            </div>
+
+            <div class="cart-modal-links">
+                <a href="" class="btn btn--fill">Оформити замовлення</a>
+                <a href="" class="cont-buy">Продовжити покупки</a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script type="text/javascript"  src="./libs/jquery.nice-select.min.js"></script>
+<script type="text/javascript"  src="./libs/jquery.raty.js"></script>
+<script type="text/javascript"  src="./libs/jq.maskedinput.js"></script>
+<script type="text/javascript" class="main-script" src="./js/scripts.min.js"></script>
+
+</body>
+</html>

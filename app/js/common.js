@@ -58,21 +58,7 @@ allLozadImg();
 
 //anim
 
-//add counting number to show delay speed
-var counterContainer = [...document.querySelectorAll('.counting-delay')];
 
-function addCoutingDelay() {
-    if (counterContainer.length) {
-        counterContainer.forEach((cont) => {
-            var anims = [...cont.querySelectorAll('.anim')];
-            anims.forEach((btn, k) => {
-                btn.dataset.animDelay = k * 100;
-            })
-        })
-    }
-}
-
-addCoutingDelay();
 
 
 var animStage = [...document.querySelectorAll('.anim-stage')];
@@ -157,6 +143,26 @@ scrollAnimations();
 //anim
 
 
+//personalopener
+let historyItems = [...document.querySelectorAll('.single-order__head')];
+
+function controlHistory() {
+    if (historyItems.length) {
+        historyItems.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                btn.classList.toggle('open');
+            })
+        })
+    }
+}
+
+controlHistory();
+
+
+//personalopener
+
 //marquee
 var marqueeContent = document.querySelector(".marquee-cont");
 
@@ -194,6 +200,47 @@ function getRaty() {
 }
 
 getRaty();
+
+
+let startsRateModal = [...document.querySelectorAll('.rate .sg-rate')];
+
+function hoverStarsRate(startsRateModal) {
+    if (!startsRateModal.length) {
+
+    } else {
+        startsRateModal.forEach((st, k) => {
+            let number = k + 1;
+            st.addEventListener('mouseover', () => {
+                st.classList.add('hover');
+                for (let i = 0; i < k; i++) {
+                    startsRateModal[i].classList.add('hover');
+                }
+            });
+            st.addEventListener('mouseout', () => {
+                st.classList.remove('hover');
+                for (let i = 0; i < k; i++) {
+                    startsRateModal[i].classList.remove('hover');
+                }
+            });
+            st.addEventListener('click', () => {
+                startsRateModal.forEach((st2) => {
+                    st2.classList.remove('clicked');
+                });
+                st.classList.add('clicked');
+                st.closest('.form').querySelector('.rating-input input').value = number;
+                for (let i = 0; i < k; i++) {
+                    startsRateModal[i].classList.add('clicked');
+                }
+            })
+        })
+    }
+}
+
+
+hoverStarsRate(startsRateModal);
+
+
+//rating control
 
 //rating
 
@@ -244,22 +291,18 @@ function startHomeBanner() {
                 },
 
                 touchRatio: 1,
-                touchAngle: 45,
-                simulateTouch: !0,
-                shortSwipes: !0,
-                longSwipes: !0,
-                longSwipesRatio: .5,
-                longSwipesMs: 300,
-                followFinger: !0,
-                allowTouchMove: !0,
-                threshold: 0,
-                touchMoveStopPropagation: !1,
-                touchStartPreventDefault: !0,
-                touchStartForcePreventDefault: !1,
-                touchReleaseOnEdges: !1,
-                uniqueNavElements: !0,
-                resistance: !0,
-                resistanceRatio: .85,
+                touchAngle: 180,
+                followFinger: true,
+                allowTouchMove: true,
+                threshold: true,
+                touchMoveStopPropagation: true,
+                touchStartPreventDefault: true,
+                touchStartForcePreventDefault: true,
+                touchReleaseOnEdges: true,
+
+                resistance: true,
+                resistanceRatio: 0.3,
+                cssMode: true,
 
                 autoplay: {
                     delay: 3700,
@@ -302,24 +345,18 @@ function startBigBanner() {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
                 speed: 800,
-                centeredSlides: false,
-                touchRatio: 1,
-                touchAngle: 45,
-                simulateTouch: !0,
-                shortSwipes: !0,
-                longSwipes: !0,
-                longSwipesRatio: .5,
-                longSwipesMs: 300,
-                followFinger: !0,
-                allowTouchMove: !0,
-                threshold: 0,
-                touchMoveStopPropagation: !1,
-                touchStartPreventDefault: !0,
-                touchStartForcePreventDefault: !1,
-                touchReleaseOnEdges: !1,
-                uniqueNavElements: !0,
-                resistance: !0,
-                resistanceRatio: .85,
+
+                followFinger: true,
+                allowTouchMove: true,
+                threshold: true,
+                touchMoveStopPropagation: true,
+                touchStartPreventDefault: true,
+                touchStartForcePreventDefault: true,
+                touchReleaseOnEdges: true,
+
+                resistance: true,
+                resistanceRatio: 0.3,
+                cssMode: true,
 
                 autoplay: {
                     delay: 4700,
@@ -377,23 +414,17 @@ function startProductSliders() {
                 },
                 pauseOnMouseEnter: true,
 
-                touchRatio: 1,
-                touchAngle: 45,
-                simulateTouch: !0,
-                shortSwipes: !0,
-                longSwipes: !0,
-                longSwipesRatio: .5,
-                longSwipesMs: 300,
-                followFinger: !0,
-                allowTouchMove: !0,
-                threshold: 0,
-                touchMoveStopPropagation: !1,
-                touchStartPreventDefault: !0,
-                touchStartForcePreventDefault: !1,
-                touchReleaseOnEdges: !1,
-                uniqueNavElements: !0,
-                resistance: !0,
-                resistanceRatio: .85,
+                followFinger: true,
+                allowTouchMove: true,
+                threshold: true,
+                touchMoveStopPropagation: true,
+                touchStartPreventDefault: true,
+                touchStartForcePreventDefault: true,
+                touchReleaseOnEdges: true,
+
+                resistance: true,
+                resistanceRatio: 0.3,
+                cssMode: true,
 
                 autoplay: {
                     delay: 4100,
@@ -455,23 +486,17 @@ function startRowSliders() {
                     prevEl: sldPrev,
                 },
 
-                touchRatio: 1,
-                touchAngle: 45,
-                simulateTouch: !0,
-                shortSwipes: !0,
-                longSwipes: !0,
-                longSwipesRatio: .5,
-                longSwipesMs: 300,
-                followFinger: !0,
-                allowTouchMove: !0,
-                threshold: 0,
-                touchMoveStopPropagation: !1,
-                touchStartPreventDefault: !0,
-                touchStartForcePreventDefault: !1,
-                touchReleaseOnEdges: !1,
-                uniqueNavElements: !0,
-                resistance: !0,
-                resistanceRatio: .85,
+                followFinger: true,
+                allowTouchMove: true,
+                threshold: true,
+                touchMoveStopPropagation: true,
+                touchStartPreventDefault: true,
+                touchStartForcePreventDefault: true,
+                touchReleaseOnEdges: true,
+
+                resistance: true,
+                resistanceRatio: 0.3,
+                cssMode: true,
 
                 autoplay: {
                     delay: 4100,
@@ -506,6 +531,112 @@ function startRowSliders() {
 }
 
 startRowSliders();
+
+
+
+let mainSlider = [...document.querySelectorAll('.product-sliders')];
+
+function startMainSlider() {
+    if (!mainSlider.length) {
+
+    } else {
+        let charsSingle = [...document.querySelectorAll('.single-char')];
+        let colorsSingle = [...document.querySelectorAll('.single-color')];
+
+        mainSlider.forEach((sld) => {
+            let sldCont = sld.querySelector('.product-main-slider .swiper');
+            let sldNext = sld.querySelector('.slider-btn--next');
+            let sldPrev = sld.querySelector('.slider-btn--prev');
+            let sldThumb = sld.querySelector('.product-thumbs .swiper');
+
+
+            var swiperThumb = new Swiper(sldThumb, {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                slidesPerGroup: 1,
+                freeMode: false,
+                watchSlidesProgress: true,
+                direction: 'horizontal',
+                centeredSlides: false,
+                loop: false,
+                draggable: true,
+
+
+                touchRatio: 1,
+                touchAngle: 160,
+                simulateTouch: true,
+
+                followFinger: true,
+                allowTouchMove: true,
+                threshold: true,
+                touchMoveStopPropagation: true,
+                touchStartPreventDefault: true,
+                touchStartForcePreventDefault: true,
+                touchReleaseOnEdges: true,
+
+                resistance: true,
+                resistanceRatio: 0.3,
+
+                breakpoints: {
+
+                    767: {
+                        centeredSlides: false,
+                        slidesPerView: 6,
+                        slidesPerGroup: 4,
+                        spaceBetween: 20,
+                    },
+                }
+
+            });
+
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                speed: 700,
+                centeredSlides: false,
+                touchRatio: 1,
+                touchAngle: 160,
+                simulateTouch: true,
+                loop: false,
+
+                followFinger: true,
+                allowTouchMove: true,
+                threshold: true,
+                touchMoveStopPropagation: true,
+                touchStartPreventDefault: true,
+                touchStartForcePreventDefault: true,
+                touchReleaseOnEdges: true,
+
+                resistance: true,
+                resistanceRatio: 0.3,
+                cssMode: true,
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                autoplay: {
+                    delay: 3700,
+                },
+                spaceBetween: 20,
+
+                thumbs: {
+                    swiper: swiperThumb,
+                }
+
+
+            });
+
+
+        })
+
+    }
+}
+
+startMainSlider();
+
+
 
 
 
@@ -621,6 +752,72 @@ function burgerControl() {
 }
 
 burgerControl();
+
+
+//telephones
+
+
+let indexNumber = '+38';
+
+function getNewIndexNumber() {
+    // console.log(document.documentElement.lang);
+    if (document.documentElement.lang === 'ro-RO') {
+        indexNumber = '+40';
+    } else {
+        indexNumber = '+38';
+    }
+}
+
+getNewIndexNumber();
+// let maskPhone = [...document.querySelectorAll('.phone-mask')];
+let maskPhone2 = [...document.querySelectorAll('.input-wrap.input-tel')];
+
+function getMaskPhone2() {
+    if (maskPhone2.length) {
+        [].forEach.call(document.querySelectorAll('.input-tel input'), function (input) {
+            // console.log(input);
+
+            let keyCode;
+
+            function mask(event) {
+                event.keyCode && (keyCode = event.keyCode);
+                let pos = this.selectionStart;
+                if (pos < 3) event.preventDefault();
+                let matrix = `${indexNumber} (___)-___-__-__`,
+                    i = 0,
+                    def = matrix.replace(/\D/g, ""),
+                    val = this.value.replace(/\D/g, ""),
+                    newValue = matrix.replace(/[_\d]/g, function (a) {
+                        return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+                    });
+                i = newValue.indexOf("_");
+                if (i != -1) {
+                    i < 5 && (i = 3);
+                    newValue = newValue.slice(0, i);
+                }
+                let reg = matrix.substr(0, this.value.length).replace(/_+/g,
+                    function (a) {
+                        return "\\d{1," + a.length + "}";
+                    }).replace(/[+()]/g, "\\$&");
+                reg = new RegExp("^" + reg + "$");
+                if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = newValue;
+                if (event.type == "blur" && this.value.length < 5) this.value = "";
+            }
+
+
+            input.addEventListener("input", mask, false);
+            input.addEventListener("focus", mask, false);
+            input.addEventListener("blur", mask, false);
+            input.addEventListener("keydown", mask, false);
+
+
+        });
+    }
+}
+
+getMaskPhone2();
+
+//telephones
 
 
 //modal windows
@@ -771,264 +968,78 @@ $('.phone-number').mask('+38(999)-999-99-99');
 //video plays
 
 
-let jsScroll = [...document.querySelectorAll('.js-scroll')];
-
-function initScrollCustom() {
-    if (jsScroll.length) {
-
-        jsScroll.forEach((scr) => {
-            let list = scr.querySelector('.js-list');
-            let txt = scr.dataset.txt;
-            $(list).mCustomScrollbar({
-                axis:"x", // horizontal scrollbar,
-                mouseWheel: false,
-                contentTouchScroll: true,
-                callbacks:{
-                    onInit: function(){
-                        let drag = scr.querySelector('.mCSB_dragger_bar');
-
-                        let p = document.createElement('p');
-
-                        p.innerHTML = txt;
-                        drag.appendChild(p);
-
-                    }
-                }
-            });
 
 
-        })
-    }
-}
 
-initScrollCustom();
+//text control
 
+let categText = [...document.querySelectorAll('.category-text')];
 
-//play video
-let irP = 0;
-var player = [];
+function categTextControl() {
+    if (categText.length) {
+        categText.forEach((cont) => {
+            let btn = cont.querySelector('.btn');
+            let txt = cont.querySelector('.category-text__wrap');
 
-function createVideo(videoBlockId, videoId, irP) {
-    player[irP] = new YT.Player(videoBlockId, {
-        videoId: videoId,
-        playerVars: {
-            // 'autoplay':1,
-            'autohide': 1,
-            'showinfo': 0,
-            'rel': 0,
-            'loop': 1,
-            'playsinline': 1,
-            'fs': 1,
-            'allowsInlineMediaPlayback': true
-        },
-        events: {
-            'onReady': function (e) {
-                // e.target.mute();
-                // if ($(window).width() > 991) {
+            let opn = btn.dataset.open;
+            let cls = btn.dataset.close;
 
-                e.target.playVideo();
-
-                // }
-            },
-            'onStateChange': function (e) {
-
-            },
-        }
-    });
-}
-
-//play video
-
-let botSlides = [...document.querySelectorAll('.js-video .play')];
-
-function videoControlSlides() {
-    if (botSlides.length) {
-        botSlides.forEach((btn) => {
-            let type = btn.dataset.videoType;
-            let id = btn.dataset.videoId;
-            let videoCont = document.querySelector('.modal-window.video .video-cont');
-            // console.log(id);
-            btn.addEventListener('click', () => {
-                videoCont.dataset.videoType = type;
-                videoCont.dataset.videoId = id;
-                // videoCont.querySelector('iframe').id = id;
-                document.body.classList.add('no-scroll');
-                videoCont.closest('.modal-window').classList.add('visible');
-
-                let videoId = id;
-
-
-                //    new 22.11.22
-
-                if (type === 'mp4') {
-                    let videoBl = document.createElement('video');
-                    videoBl.src = id;
-                    videoBl.playsinline = true;
-                    videoBl.controls = true;
-                    videoCont.classList.add('playing');
-                    if (videoCont.querySelector('.video-frame')) {
-                        document.querySelector('.video-iframe video').pause();
-                    } else {
-                        $(videoCont).append('<div class="video-iframe" id="' + videoId + '"></div>');
-                        videoCont.querySelector('.video-iframe').append(videoBl);
-                        document.querySelector('.video-iframe video').play();
-                    }
-
-
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (txt.classList.contains('open')) {
+                    txt.classList.remove('open');
+                    btn.innerHTML = cls;
 
                 } else {
-
-                    if (type === 'vimeo') {
-
-                        if (videoCont.classList.contains('playing')) {
-                            var player2 = new Vimeo.Player(videoCont.querySelector('iframe'));
-                            if (videoCont.classList.contains('pause')) {
-                                player2.play();
-                                videoCont.classList.remove('pause');
-                            } else {
-                                player2.pause();
-                                videoCont.classList.add('pause');
-                            }
-
-                        } else {
-                            let videoBl = document.createElement('iframe');
-                            videoBl.src = id;
-                            videoBl.playsinline = true;
-                            videoBl.controls = true;
-                            videoBl.autoplay = true;
-                            videoBl.setAttribute('allow', 'autoplay');
-                            videoBl.setAttribute('frameborder', '0');
-                            videoCont.classList.add('playing');
-                            videoCont.append(videoBl);
-
-
-                            var player2 = new Vimeo.Player(videoCont.querySelector('iframe'));
-
-                            player2.play();
-                        }
-
-
-
-
-                    } else {
-                        if (videoCont.classList.contains('playing')) {
-
-                            if (videoCont.classList.contains('pause')) {
-                                player[Number(videoCont.dataset.pl)].playVideo();
-                                videoCont.classList.remove('pause')
-                            } else {
-                                player[Number(videoCont.dataset.pl)].pauseVideo();
-                                videoCont.classList.add('pause')
-                            }
-                        } else {
-                            videoCont.classList.add('playing');
-                            $(videoCont).append('<div class="video-iframe" id="' + videoId + '"></div>');
-                            createVideo(videoId, videoId, irP);
-                            videoCont.dataset.pl = irP;
-                            irP++;
-                        }
-
-                    }
+                    txt.classList.add('open');
+                    btn.innerHTML = opn;
                 }
-                //    new 22.11.22
-
-
             })
         })
     }
 }
 
-videoControlSlides();
+categTextControl();
 
-//tp video
+//text control
 
-var elementBtns2 = document.querySelector('.footer');
+//control view of category
 
-var Visible2 = function (target) {
-    if (!document.querySelector('.banner-consult')) {
+let btnsView = [...document.querySelectorAll('.srt-type')];
 
-    } else {
-        var targetPosition = {
-                top: window.pageYOffset + target.getBoundingClientRect().top,
-                left: window.pageXOffset + target.getBoundingClientRect().left,
-                right: window.pageXOffset + target.getBoundingClientRect().right,
-                bottom: window.pageYOffset + target.getBoundingClientRect().bottom
-            },
-            // Получаем позиции окна
-            windowPosition = {
-                top: window.pageYOffset + 80,
-                left: window.pageXOffset,
-                right: window.pageXOffset + document.documentElement.clientWidth,
-                bottom: window.pageYOffset + document.documentElement.clientHeight
-            };
-
-        if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-            targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-            targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-            targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-            // Если элемент полностью видно, то запускаем следующий код
-            document.querySelector('.banner-consult').classList.add('vis2');
-        } else {
-            // Если элемент не видно, то запускаем этот код
-            document.querySelector('.banner-consult').classList.remove('vis2');
-        }
-        ;
+function changeViewCat() {
+    if (btnsView.length) {
+        let catWrapBlock = document.querySelector('.catagory-wrap');
+        btnsView.forEach((btn, l) => {
+            btn.inne
+            btn.addEventListener('click', () => {
+                btnsView.forEach((btn2, k) => {
+                    btn2.classList.remove('active');
+                });
+                btn.classList.add('active');
+                if (l === 1) {
+                    catWrapBlock.classList.add('horizontal');
+                } else {
+                    catWrapBlock.classList.remove('horizontal');
+                }
+            })
+        })
     }
-    // Все позиции элемента
+}
+changeViewCat();
+//control view of category
 
-};
+$(document).on('click', '.quantity__button--minus', function (e) {
+    var t = $(this).next().find('input').val();
+    t > 1 && $(this).next().find('input').val(+t - 1);
 
 
-var elementBtns3 = document.querySelector('.services .service-count');
-
-var Visible3 = function (target) {
-    if (!elementBtns3) {
-
-    } else {
-        var targetPosition = {
-                top: window.pageYOffset + target.getBoundingClientRect().top,
-                left: window.pageXOffset + target.getBoundingClientRect().left,
-                right: window.pageXOffset + target.getBoundingClientRect().right,
-                bottom: window.pageYOffset + target.getBoundingClientRect().bottom
-            },
-            // Получаем позиции окна
-            windowPosition = {
-                top: window.pageYOffset + 80,
-                left: window.pageXOffset,
-                right: window.pageXOffset + document.documentElement.clientWidth,
-                bottom: window.pageYOffset + document.documentElement.clientHeight
-            };
-
-        if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-            targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-            targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-            targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-            // Если элемент полностью видно, то запускаем следующий код
-            if (document.querySelector('.banner-consult')) {
-                document.querySelector('.banner-consult').classList.remove('vis');
-            }
-
-        } else {
-            // Если элемент не видно, то запускаем этот код
-            if (document.querySelector('.banner-consult')) {
-                document.querySelector('.banner-consult').classList.add('vis');
-            }
-
-        }
-        ;
-    }
-    // Все позиции элемента
-
-};
-
-// Запускаем функцию при прокрутке страницы
-window.addEventListener('scroll', function () {
-    // Visible(elementBtns);
-    Visible2(elementBtns2);
-    Visible3(elementBtns3);
+    return false;
 });
+$(document).on('click', '.quantity__button--plus', function (e) {
+    var t = $(this).prev().find('input').val();
+    $(this).prev().find('input').val(+t + 1);
 
-// А также запустим функцию сразу. А то вдруг, элемент изначально видно
-// Visible(elementBtns);
-Visible2(elementBtns2);
-Visible3(elementBtns3);
+    return false;
+});
