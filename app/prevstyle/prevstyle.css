@@ -78,7 +78,7 @@ box-sizing: border-box;}
     right: 0;
     bottom: 0;
     content: "";
-    background: #E5E5E5;
+    background: #1f1f1f;
     -webkit-transform: rotate(38deg);
     -ms-transform: rotate(38deg);
     transform: rotate(38deg);
