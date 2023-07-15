@@ -5484,8 +5484,6 @@
 }
 
 
-//
-
 .search-block {
   position: relative;
 
@@ -5544,6 +5542,160 @@
     border-radius: 0 1.5625vw 1.5625vw 0;
     height: 2.0833vw;
     padding: 0.2604vw 2.0833vw;
+  }
+}
+
+//
+
+.page404 {
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.8333vw 0 2.8125vw;
+  background: #ECEEF8;
+}
+
+.page404__cont {
+  width: 100%;
+  margin-top: 0.8854vw;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.page404__left {
+  width: 23.2292vw;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-bottom: 4.6875vw;
+
+  p {
+    color: $main-color;
+    font-size: 1.6667vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 6.0938vw 0 10.7292vw;
+  }
+}
+
+.page404__right {
+  flex-grow: 1;
+  position: relative;
+
+  .zsu {
+    width: 33.0208vw;
+    position: absolute;
+    bottom: 0;
+    left: -3.3333vw;
+    display: flex;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .dron {
+    position: absolute;
+    right: 0;
+    top: 2.6042vw;
+    width: 17.5521vw;
+    height: auto;
+    display: flex;
+    animation: movingDrone 14s ease-in-out infinite;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .target {
+    width: 11.7188vw;
+    position: absolute;
+    right: 3.6458vw;
+    bottom: 0.7813vw;
+    height: auto;
+    display: flex;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .phrase {
+    position: absolute;
+    top: 0;
+    left: 10.9375vw;
+    //background: #ECEEF8;
+    //border: 3px solid $main-color;
+    padding: 0.7813vw 0.5208vw 2.8646vw 1.3021vw;
+    width: 17.4479vw;
+
+    background: url("../img/citat2.svg") no-repeat center / 100% 100%, #ECEEF8;
+
+
+    .txt {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      p {
+        color: $main-color;
+        font-size: 0.8333vw;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 1.0417vw;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes movingDrone {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(15%, 5%);
+  }
+  20% {
+    transform: translate(25%, 10%);
+  }
+  30% {
+    transform: translate(15%, 10%);
+  }
+  40% {
+    transform: translate(-5%, 5%);
+  }
+  50% {
+    transform: translate(-15%, -5%);
+  }
+  60% {
+    transform: translate(-25%, -5%);
+  }
+  70% {
+    transform: translate(-15%, 0%);
+  }
+  80% {
+    transform: translate(5%, 5%);
+  }
+  90% {
+    transform: translate(-15%, 5%);
+  }
+  90% {
+    transform: translate(0%, 0%);
   }
 }
 
