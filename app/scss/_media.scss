@@ -239,6 +239,7 @@
     pointer-events: auto;
     height: 0;
     overflow: hidden;
+    max-height: none;
 
     .container {
       padding: 0;
@@ -252,6 +253,9 @@
     }
   }
   .menu-sub__cont {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
     > span {
       display: none;
     }

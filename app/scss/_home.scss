@@ -5434,22 +5434,27 @@
 .menu-sub {
   width: 100%;
   position: absolute;
-  background: #fff;
-  padding: 2.0833vw 0 5.4688vw;
-  top: 100%;
+
+  top: calc(100% - 0.3vw);
   left: 0;
-  max-height: calc(100vh - 7.0833vw);
+  max-height: 0;
   overflow-y: auto;
 
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.2s ease-out, max-height 0.5s ease-in-out;
+
+  .container {
+
+
+  }
 
 }
 
 .menu-item-has-children {
   &.hov {
     .menu-sub {
+      max-height: calc(100vh - 7.0833vw);
       opacity: 1;
       pointer-events: auto;
     }
@@ -5462,14 +5467,15 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-
+  background: #fff;
+  box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  border: 1px solid #F0F0F0;
+  padding: 2.0833vw 2.0833vw 3.4688vw;
   .title {
-    padding: 0;
     margin-bottom: 2.7604vw;
 
-    &::before {
-      content: none;
-    }
+
   }
 
   > ul {
