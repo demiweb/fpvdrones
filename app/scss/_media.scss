@@ -5,6 +5,31 @@
 }
 
 @media screen and (max-width: 767px) {
+  .big-banner {
+    .btns {
+      display: none;
+    }
+  }
+  .seo-text {
+    padding: 5vw 0;
+
+    .category-text {
+      width: 100%;
+    }
+  }
+
+  .header-top__menu.header-top__menu--lang .header-top__menu-block {
+    width: 100%;
+
+    ul {
+      li {
+        a {
+          background: #fff;
+          color: $main-color;
+        }
+      }
+    }
+  }
 
   body .more-complect__total .btn {
     padding: 2vw 8vw;
@@ -60,6 +85,9 @@
     justify-content: flex-start;
 
     .title {
+      width: 100%;
+      text-align: center;
+
       &::before {
         left: 50%;
         transform: translate(-50%, 0);
@@ -99,7 +127,7 @@
   }
   .page404__right .phrase {
     width: 46vw;
-    padding: 2.6667vw 1.3333vw 8.0000vw 2.6667vw;
+    padding: 2.6667vw 2.333vw 8vw 3.4667vw;
 
     top: -8vw;
     left: 16.9375vw;
@@ -519,7 +547,7 @@
     }
   }
   .cart-items {
-    max-height: calc(100vh - 69.625vw);
+    max-height: calc(100vh - 143.625vw);
   }
   .single-cart {
     flex-shrink: 0;
@@ -633,11 +661,21 @@
     max-height: 100%;
     width: 100%;
   }
+  .more-complect__products {
+    gap: 5.3333vw;
+    overflow-x: auto;
+    width: 100%;
 
+    .single-product {
+      width: calc(50% - 2.6667vw);
+      flex-shrink: 0;
+    }
+  }
 
   .more-complect__products .single-product .img::after {
-    width: 6.4000vw;
-    height: 6.4000vw;
+    width: 8.4000vw;
+    height: 8.4000vw;
+    left: calc(100% + 2.6667vw);
   }
   .product-info__right-head {
     gap: 5.3333vw;
@@ -1203,7 +1241,7 @@
         margin-bottom: 3.2000vw;
       }
 
-      a {
+      a, p {
         font-size: 3.4667vw;
         line-height: 1.2;
         max-width: 100%;
@@ -2647,6 +2685,41 @@
     }
   }
 
+  .news-related {
+    padding: 7vw 0;
+  }
+  .news-related__list {
+    margin-top: 2vw;
+    flex-wrap: wrap;
+
+    .single-news {
+      width: 100%;
+    }
+  }
+  .product-slider {
+    .btn.mob-only {
+      display: none !important;
+    }
+  }
+  .product-thumbs {
+    display: none;
+  }
+  .product-main-slider {
+    .dots {
+      display: flex;
+
+      .single-dot {
+        background: #cacdd8;
+
+        &.active {
+          background: $main-color;
+        }
+      }
+    }
+  }
+  .modal-window.modal-cart .modal-container {
+    height: auto;
+  }
 }
 
 //cbt

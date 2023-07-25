@@ -333,7 +333,8 @@ function startBigBanner() {
 
         bigBanner.forEach((sld) => {
             let sldCont = sld.querySelector('.swiper');
-
+            let sldNext = sld.querySelector('.slider-btn--next');
+            let sldPrev = sld.querySelector('.slider-btn--prev');
             let pagin = sld.querySelector('.dots');
             const swiper2 = new Swiper(sldCont, {
                 // Optional parameters
@@ -342,7 +343,7 @@ function startBigBanner() {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
                 speed: 800,
-
+                crossFade: true,
                 followFinger: true,
                 allowTouchMove: true,
                 threshold: true,
@@ -353,10 +354,13 @@ function startBigBanner() {
 
                 resistance: true,
                 resistanceRatio: 0.3,
-                cssMode: true,
-
+                // cssMode: true,
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
                 autoplay: {
-                    delay: 4700,
+                    delay: 4600,
                 },
                 spaceBetween: 0,
 
@@ -422,9 +426,7 @@ function startProductSliders() {
                 resistanceRatio: 0.3,
                 cssMode: true,
 
-                autoplay: {
-                    delay: 4100,
-                },
+                autoplay: false,
                 spaceBetween: 12,
                 breakpoints: {
                     767: {
@@ -492,9 +494,7 @@ function startRowSliders() {
                 resistanceRatio: 0.3,
                 cssMode: true,
 
-                autoplay: {
-                    delay: 4100,
-                },
+                autoplay: false,
                 spaceBetween: 12,
                 breakpoints: {
                     767: {
@@ -539,6 +539,7 @@ function startMainSlider() {
             let sldNext = sld.querySelector('.slider-btn--next');
             let sldPrev = sld.querySelector('.slider-btn--prev');
             let sldThumb = sld.querySelector('.product-thumbs .swiper');
+            let pagin = sld.querySelector('.dots');
 
 
             var swiperThumb = new Swiper(sldThumb, {
@@ -607,14 +608,23 @@ function startMainSlider() {
                     nextEl: sldNext,
                     prevEl: sldPrev,
                 },
-                autoplay: {
-                    delay: 3700,
-                },
+                autoplay: false,
                 spaceBetween: 20,
 
                 thumbs: {
                     swiper: swiperThumb,
-                }
+                },
+
+                pagination: {
+                    el: pagin,
+                    type: 'bullets',
+                    bulletActiveClass: 'active',
+                    bulletClass: 'single-dot',
+                    bulletElement: 'div',
+                    clickable: true,
+                    currentClass: 'current',
+                    spaceBetween: 2,
+                },
 
 
             });
