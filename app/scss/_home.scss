@@ -5437,12 +5437,12 @@
 
   top: calc(100% - 0.3vw);
   left: 0;
-  max-height: 0;
+  max-height: calc(100vh - 7.0833vw);
   overflow-y: auto;
 
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s ease-out, max-height 0.5s ease-in-out;
+  transition: opacity 0.4s ease-out, max-height 0.5s ease-in-out;
 
   .container {
 
@@ -5454,7 +5454,7 @@
 .menu-item-has-children {
   &.hov {
     .menu-sub {
-      max-height: calc(100vh - 7.0833vw);
+      //
       opacity: 1;
       pointer-events: auto;
     }
@@ -5854,5 +5854,25 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .product-main-slider {
   .dots {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-menu>ul>li>a {
+    transition: font-size 0.3s ease-in-out, padding 0.3s ease-in-out, transform 0.3s ease-in-out;
+    &::before {
+      transition: all 0.3s ease-in-out;
+    }
+
+  }
+  .header-menu>ul>li {
+    &:hover {
+      & > a {
+       transform: scale(1.07);
+        &::before {
+          transform: scale(0.93);
+        }
+      }
+    }
   }
 }
