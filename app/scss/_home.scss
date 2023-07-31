@@ -523,7 +523,7 @@
 
   --marquee-elements-displayed: 14;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
-  --marquee-animation-duration: calc(var(--marquee-elements) * 1s);
+  --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
 }
 
 
@@ -641,6 +641,21 @@
     &:hover {
       background: #fff;
       color: $main-color;
+    }
+  }
+  &.btn--white {
+    color: $main-color;
+    background: #fff;
+    border-color: #fff;
+
+    font-weight: 600;
+    font-size: 0.7292vw;
+    line-height: 0.8854vw;
+    padding: 0.8854vw 1.5625vw;
+
+    &:hover {
+      background: $main-color;
+      color: #fff;
     }
   }
 
@@ -2189,6 +2204,12 @@
   justify-content: flex-start;
   background: #F5F7FF;
   padding: 1.6667vw 3.1250vw 2.0833vw 3.3333vw;
+  &:nth-child(2) {
+    background: $main-color;
+    > span, > p {
+      color: #fff;
+    }
+  }
 
   > span {
     color: #000;
@@ -2495,10 +2516,17 @@
   margin-top: 1.7188vw;
 
   .single-product {
-    width: calc((100% / 3) - (2.0833vw / 3));
+    width: calc((100% / 3) - (2.0834vw / 3));
   }
 }
 
+@media screen and (min-width: 1600px) {
+  .favs-list {
+    .single-product {
+      width: calc((100% / 4) - (3.1251vw / 4));
+    }
+  }
+}
 
 .orders-empty {
   width: 100%;
@@ -3568,9 +3596,46 @@
 
 .product-main-slider {
   width: 100%;
+  position: relative;
 
   .btns {
-    display: none;
+    //display: none;
+  }
+  .slider-btn {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    position: absolute;
+    z-index: 3;
+    &.slider-btn--next {
+      left: auto;
+      right: 0;
+    }
+  }
+  .btns {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .slider-btn {
+    border-radius: 30px 0 0 30px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    z-index: 2;
+
+    &.slider-btn--prev {
+      border-radius: 0px 30px 30px 0px;
+      top: 50%;
+      left: 0;
+      right: auto;
+      transform: translate(0, -50%);
+    }
+  }
+  &:hover {
+    .btns {
+      opacity: 1;
+    }
   }
 
   .swiper {

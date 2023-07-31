@@ -115,13 +115,13 @@
       width: 24.7188vw;
       position: absolute;
       right: 0;
-      bottom: 34.7813vw;
+      bottom: 11.7813vw;
     }
 
     .dron {
 
       right: 3vw;
-      top: 1.6042vw;
+      top: 22.6042vw;
       width: 19.5521vw;
     }
   }
@@ -1651,7 +1651,7 @@
     gap: 4.2667vw;
 
     .single-product {
-      width: calc(50% - 2.1333vw);
+      width: calc(50% - 2.13335vw);
     }
   }
   .auth-wrapper {
@@ -2075,6 +2075,11 @@
   }
   .btn {
     &.btn--fill {
+      font-size: 3.2000vw;
+      line-height: 1.2;
+      padding: 1.6000vw 3.7333vw;
+    }
+    &.btn--white {
       font-size: 3.2000vw;
       line-height: 1.2;
       padding: 1.6000vw 3.7333vw;
