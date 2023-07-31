@@ -2204,12 +2204,7 @@
   justify-content: flex-start;
   background: #F5F7FF;
   padding: 1.6667vw 3.1250vw 2.0833vw 3.3333vw;
-  &:nth-child(2) {
-    background: $main-color;
-    > span, > p {
-      color: #fff;
-    }
-  }
+
 
   > span {
     color: #000;
@@ -2236,6 +2231,16 @@
 
   .btn {
     margin-top: auto;
+  }
+}
+.auth-wrapper {
+  .auth-block {
+    &:nth-child(2) {
+      background: $main-color;
+      > span, > p {
+        color: #fff;
+      }
+    }
   }
 }
 
