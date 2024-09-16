@@ -164,7 +164,7 @@ controlHistory();
 var marqueeContent = document.querySelector(".marquee-cont");
 
 function marqqueFnc() {
-    if (marqueeContent) {
+    if (document.querySelector(".marquee-cont .single-marq")) {
         var root = document.documentElement;
         var marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
 
@@ -187,9 +187,9 @@ function getRaty() {
         if ($(this).html() == '') {
             $(this).raty({
                 readOnly: true,
-                starHalf: './img/star-full.svg',
-                starOn: './img/star-full.svg',
-                starOff: './img/star-clear.svg',
+                starHalf: 'catalog/view/theme/fpvua/img/star-full.svg',
+                starOn: 'catalog/view/theme/fpvua/img/star-full.svg',
+                starOff: 'catalog/view/theme/fpvua/img/star-clear.svg',
                 hints: ['a', null, '', null, '', null]
             });
         }
@@ -269,8 +269,6 @@ function startHomeBanner() {
     if (!homeBanner.length) {
 
     } else {
-
-
         homeBanner.forEach((sld) => {
             let sldCont = sld.querySelector('.swiper');
             let sldNext = sld.querySelector('.slider-btn--next');
@@ -531,8 +529,8 @@ function startMainSlider() {
     if (!mainSlider.length) {
 
     } else {
-        let charsSingle = [...document.querySelectorAll('.single-char')];
-        let colorsSingle = [...document.querySelectorAll('.single-color')];
+        let charsSingle = [...document.querySelectorAll('.product-version li')];
+
 
         mainSlider.forEach((sld) => {
             let sldCont = sld.querySelector('.product-main-slider .swiper');
@@ -629,7 +627,12 @@ function startMainSlider() {
 
             });
 
-
+            charsSingle.forEach((bt) => {
+                bt.addEventListener('click', () => {
+                    let sl = bt.dataset.slide;
+                    swiper2.slideTo(Number(sl));
+                })
+            })
         })
 
     }
@@ -916,6 +919,17 @@ function controlModal() {
 
 controlModal();
 
+$('body').on('click', '.modal-close', function () {
+    console.log($(this)[0]);
+    $(this).closest('.modal-window').removeClass('visible');
+});
+$('body').on('click', '.add-set-btn', function () {
+    $('.series-options-modal').addClass('visible');
+});
+
+$('body').on('click', '.backplate', function () {
+    $(this).closest('.modal-window').removeClass('visible');
+});
 //tabs
 
 let tabBtn = [...document.querySelectorAll('.tab-btn')];
@@ -1039,14 +1053,14 @@ changeViewCat();
 
 $(document).on('click', '.quantity__button--minus', function (e) {
     var t = $(this).next().find('input').val();
-    t > 1 && $(this).next().find('input').val(+t - 1);
-
+    t > 1 && $(this).next().find('input').val(+t - 1).trigger('change');
 
     return false;
 });
 $(document).on('click', '.quantity__button--plus', function (e) {
     var t = $(this).prev().find('input').val();
-    $(this).prev().find('input').val(+t + 1);
+    $(this).prev().find('input').val(+t + 1).trigger('change');
+
 
     return false;
 });
@@ -1076,4 +1090,161 @@ function searchControl() {
 searchControl();
 
 
+$('body').on('click', '.product-right .rating-blk > a', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(".product-comments").offset().top - 200
+    }, 600);
+});
+
+
 //search control
+//new 92024
+let openList = [...document.querySelectorAll('.open-more')];
+
+function controlOpenList() {
+    if (openList.length) {
+        openList.forEach((bt) => {
+            bt.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                bt.closest('.open-list').classList.toggle('open');
+            })
+        })
+    }
+}
+
+controlOpenList();
+
+let portfolios = [...document.querySelectorAll('.portfolio-slider')];
+
+function startPortfolio() {
+    if (!portfolios.length) {
+
+    } else {
+
+
+        portfolios.forEach((sld) => {
+            let sldCont = sld.querySelector('.swiper');
+            let sldNext = sld.querySelector('.slider-btn--next');
+            let sldPrev = sld.querySelector('.slider-btn--prev');
+            let pagin = sld.querySelector('.dots');
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                speed: 800,
+                crossFade: true,
+                followFinger: true,
+                allowTouchMove: true,
+                threshold: true,
+                touchMoveStopPropagation: true,
+                touchStartPreventDefault: true,
+                touchStartForcePreventDefault: true,
+                touchReleaseOnEdges: true,
+
+                centeredSlides: false,
+                resistance: true,
+                resistanceRatio: 0.3,
+                // cssMode: true,
+                initialSlide: 0,
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                autoplay: {
+                    delay: 4600,
+                },
+                spaceBetween: 14,
+
+                pagination: false,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    }
+                }
+
+
+            });
+
+
+        })
+
+    }
+}
+
+startPortfolio();
+
+let addedModal = [...document.querySelectorAll('.modal-added__bot')];
+
+function startAddedModal() {
+    if (!addedModal.length) {
+
+    } else {
+
+
+        addedModal.forEach((sld) => {
+            let sldCont = sld.querySelector('.swiper');
+            let sldNext = sld.querySelector('.slider-btn--next');
+            let sldPrev = sld.querySelector('.slider-btn--prev');
+            let pagin = sld.querySelector('.dots');
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+                speed: 800,
+                crossFade: true,
+                followFinger: true,
+                allowTouchMove: true,
+                threshold: true,
+                touchMoveStopPropagation: true,
+                touchStartPreventDefault: true,
+                touchStartForcePreventDefault: true,
+                touchReleaseOnEdges: true,
+
+                centeredSlides: false,
+                resistance: true,
+                resistanceRatio: 0.3,
+                // cssMode: true,
+                initialSlide: 0,
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                autoplay: false,
+                spaceBetween: 5,
+
+                pagination: false,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                    }
+                }
+
+
+            });
+
+
+        })
+
+    }
+}
+
+startAddedModal();
+
+
+$('body').on('click', '.btn-to', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    let lnk = document.querySelector('.services-contacts');
+    // console.log(paddingT);
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(lnk).offset().top - $('.header').outerHeight(true)
+    }, 600);
+
+});

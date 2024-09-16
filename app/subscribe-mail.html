@@ -19,7 +19,7 @@
 //= details/header.html
 <main>
 
-    <section class="auth-section">
+    <section class="auth-section" style="display:none;">
         <div class="container">
             <div class="breadcrumbs">
                 <ul>
@@ -119,7 +119,7 @@
     </section>
 
 
-    <section class="main-bonuses">
+    <section class="main-bonuses" style="display: none">
         <div class="container">
             <div class="main-bonuses__cont anim" data-anim-delay="0" data-anim-duration="860"
                  data-anim="fade-up">
@@ -158,12 +158,96 @@
         </div>
     </section>
 
+    <canvas></canvas>
+
 
 </main>
 
 
 //= details/footer.html
 //= details/scripts.html
+
+<script>
+    var te = "landing", ne = "default", ie = function (e) {
+        Object(c.a)(n, e);
+        var t = ee(n);
+
+        function n() {
+            var e;
+            return Object(a.a)(this, n), (e = t.call(this)).ui = {canvas: Object(i.createRef)()}, e.webgl = {
+                gl: null,
+                fbo: null,
+                backgroundScene: null,
+                landingScene: null,
+                postProccesedScene: null
+            }, e._resizeHandler = e._resizeHandler.bind(Object(s.a)(e)), e._render = e._render.bind(Object(s.a)(e)), e
+        }
+
+        return Object(o.a)(n, [{
+            key: "componentDidMount", value: function () {
+                this._setupEventListeners(), this._initWebgl(), p.a.ticker.add(this._render), this._resize()
+            }
+        }, {
+            key: "componentWillUnmount", value: function () {
+                p.a.ticker.remove(this._render), this._removeEventListeners(), this.webgl.landingScene.dispose()
+            }
+        }, {
+            key: "render", value: function () {
+                return Object(r.jsx)("canvas", {ref: this.ui.canvas, className: "background"})
+            }
+        }, {
+            key: "_initWebgl", value: function () {
+                var e = this.ui.canvas.current;
+                this.webgl.gl = e.getContext("webgl"), this.webgl.fbo = new z(this.webgl.gl), this.webgl.landingScene = new X(this.webgl.gl), this.webgl.backgroundScene = new K(this.webgl.gl), this.webgl.postProccesedScene = new Z(this.webgl.gl, this.webgl.fbo.getTexture()), g.a.set("background-active-scene", this.webgl.postProccesedScene)
+            }
+        }, {
+            key: "_setupEventListeners", value: function () {
+                S.resizeManager.addEventListener("resize", this._resizeHandler), S.resizeManager.addEventListener("resize:complete", this._resizeHandler), g.a.addEventListener("change:background-state", this._onStateChange.bind(this)), g.a.addEventListener("change:background-transition", this._onColorChange.bind(this))
+            }
+        }, {
+            key: "_removeEventListeners", value: function () {
+                S.resizeManager.removeEventListener("resize", this._resizeHandler), S.resizeManager.removeEventListener("resize:complete", this._resizeHandler)
+            }
+        }, {
+            key: "_resizeHandler", value: function () {
+                this._resize()
+            }
+        }, {
+            key: "_onStateChange", value: function () {
+                switch (g.a.get("background-state")) {
+                    case te:
+                        this.webgl.landingScene.videoLeft.uniforms.uTexture.playVideo(), this.webgl.landingScene.videoRight.uniforms.uTexture.playVideo(), g.a.set("background-active-scene", this.webgl.postProccesedScene);
+                        break;
+                    default:
+                    case ne:
+                        this.webgl.landingScene.videoLeft.uniforms.uTexture.pauseVideo(), this.webgl.landingScene.videoRight.uniforms.uTexture.pauseVideo(), g.a.set("background-active-scene", this.webgl.backgroundScene)
+                }
+            }
+        }, {
+            key: "_onColorChange", value: function () {
+                var e = this.webgl.backgroundScene.getChildByName(j.a.BACKGROUND_WAVE),
+                    t = g.a.get("background-transition")[0], n = g.a.get("background-transition")[1];
+                e.setColor(t, n)
+            }
+        }, {
+            key: "_resize", value: function () {
+                var e = this.ui.canvas.current;
+                e.width = e.clientWidth, e.height = e.clientHeight, this.webgl.gl.viewport(0, 0, e.width, e.height), this.webgl.fbo.setSize(e.width, e.height), this.webgl.landingScene.setSize(e.width, e.height), this.webgl.backgroundScene.setSize(e.width, e.height), this.webgl.postProccesedScene.setSize(e.width, e.height)
+            }
+        }, {
+            key: "_render", value: function () {
+                switch (g.a.get("background-state")) {
+                    case te:
+                        this.webgl.landingScene.update(), this.webgl.landingScene.render(this.webgl.fbo), this.webgl.postProccesedScene.update(), this.webgl.postProccesedScene.render();
+                        break;
+                    default:
+                    case ne:
+                        this.webgl.backgroundScene.update(), this.webgl.backgroundScene.render()
+                }
+            }
+        }]), n
+    }(i.Component), re = n("YFqc"), ae = n.n(re);
+</script>
 
 </body>
 </html>
