@@ -273,6 +273,22 @@
   .print-prices__list {
     max-width: 100%;
   }
+  .print-prices {
+    table {
+      max-width: 100%;
+      th, td {
+        font-size: vw(10px);
+        padding-top: vw(5px);
+        padding-bottom: vw(5px);
+        &:first-child {
+          padding-left: vw(10px);
+        }
+        &:last-child {
+          padding-right: vw(10px);
+        }
+      }
+    }
+  }
   .print-prices__line {
     padding: vw(5px) vw(10px);
   }

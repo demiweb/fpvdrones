@@ -4066,6 +4066,56 @@ span.product-warning {
   }
 }
 
+.print-prices {
+  table {
+    width: 100%;
+    max-width: vw(1164px);
+    border-collapse: collapse;
+    border: 1px solid #EBEBEB;
+
+    tr {
+      padding: vw(14px) vw(40px);
+      background: #F5F7FF;
+      border: 1px solid #EBEBEB;
+
+      &:nth-child(even) {
+        background: rgba(255, 255, 255, 0);
+      }
+    }
+
+    th, td {
+      padding: vw(14px) 0;
+      font-style: normal;
+      font-weight: 300;
+      font-size: vw(16px);
+      line-height: 1.375;
+      color: #000000;
+      text-align: left;
+      width: 31%;
+
+      &:first-child {
+        padding-left: vw(40px);
+      }
+
+      &:last-child {
+        padding-right: vw(40px);
+      }
+
+      &:nth-child(3) {
+        width: 38%;
+      }
+    }
+
+    th {
+      font-weight: 600;
+    }
+
+    td:first-child {
+      font-weight: 600;
+    }
+  }
+}
+
 .print-prices__list {
   width: 100%;
   max-width: vw(1164px);
@@ -4470,6 +4520,7 @@ span.product-warning {
   justify-content: flex-start;
   gap: vw(25px);
 }
+
 .modal-order__right {
   flex-grow: 1;
 }
