@@ -57,6 +57,9 @@ allLozadImg();
 
 //anim
 
+$el = $('.header');
+let hh = $('header').outerHeight();
+document.body.style.setProperty('--headerheight', `${hh}px`);
 
 var animStage = [...document.querySelectorAll('.anim-stage')];
 
@@ -138,7 +141,69 @@ scrollAnimations();
 //
 
 //anim
+//menu tabs control
 
+
+let spanTabsMenu = [...document.querySelectorAll('.menu-new-tabs span')];
+
+function controlSpanTabs() {
+    if (spanTabsMenu.length) {
+         spanTabsMenu.forEach((btn, k) => {
+             btn.addEventListener('click', () => {
+                 if(!btn.classList.contains('active')) {
+                     spanTabsMenu.forEach((btn2) => {
+                         btn2.classList.remove('active');
+                     });
+                     btn.classList.add('active');
+                     if (k === 0) {
+                         document.querySelector('.header-menu--cat').classList.remove('active');
+                         document.querySelector('.header-menu').classList.add('active');
+                     }
+                     if (k === 1) {
+                         document.querySelector('.header-menu').classList.remove('active');
+                         document.querySelector('.header-menu--cat').classList.add('active');
+                     }
+                 }
+             })
+         })
+    }
+}
+controlSpanTabs();
+//menu tabs control
+
+//footer tabs
+
+let tabFooterBtn = [...document.querySelectorAll('.footer-tabs__top > span')];
+
+function changeFooterTab() {
+    if (!tabFooterBtn.length) {
+
+    } else {
+        tabFooterBtn.forEach((btn, k) => {
+            btn.addEventListener('click', () => {
+                if (btn.classList.contains('active')) {
+
+                } else {
+                    tabFooterBtn.forEach((btn2) => {
+                        btn2.classList.remove('active');
+                    });
+                    btn.classList.add('active');
+                    [...btn.closest('.footer-tabs').querySelectorAll('.footer-tab')].forEach((tab, m) => {
+                        if (m === k) {
+                            tab.classList.add('active');
+                        } else {
+                            tab.classList.remove('active');
+                        }
+                    })
+                }
+            })
+        })
+    }
+}
+
+changeFooterTab();
+
+//footer tabs
 
 //personalopener
 let historyItems = [...document.querySelectorAll('.single-order__head')];
@@ -535,10 +600,15 @@ function startMainSlider() {
         mainSlider.forEach((sld) => {
             let sldCont = sld.querySelector('.product-main-slider .swiper');
             let sldNext = sld.querySelector('.slider-btn--next');
+            let sldNextT = sld.querySelector('.product-thumbs .slider-btn--next');
             let sldPrev = sld.querySelector('.slider-btn--prev');
+            let sldPrevT = sld.querySelector('.product-thumbs .slider-btn--prev');
             let sldThumb = sld.querySelector('.product-thumbs .swiper');
             let pagin = sld.querySelector('.dots');
-
+            let amThumb = 6;
+            if (sld.classList.contains('product-video-sld')) {
+                amThumb = 4;
+            }
 
             var swiperThumb = new Swiper(sldThumb, {
                 spaceBetween: 10,
@@ -566,12 +636,15 @@ function startMainSlider() {
 
                 resistance: true,
                 resistanceRatio: 0.3,
-
+                navigation: {
+                    nextEl: sldNextT,
+                    prevEl: sldPrevT,
+                },
                 breakpoints: {
 
                     767: {
                         centeredSlides: false,
-                        slidesPerView: 6,
+                        slidesPerView: amThumb,
                         slidesPerGroup: 4,
                         spaceBetween: 20,
                     },
@@ -1093,8 +1166,9 @@ searchControl();
 $('body').on('click', '.product-right .rating-blk > a', function (e) {
     e.preventDefault();
     e.stopPropagation();
+    $(".rev-tab").click();
     $([document.documentElement, document.body]).animate({
-        scrollTop: $(".product-comments").offset().top - 200
+        scrollTop: $(".rev-tab").offset().top - 200
     }, 600);
 });
 

@@ -1,18 +1,18 @@
 var syntax        = 'scss'; // Syntax: sass or scss;
 
 var gulp          = require('gulp'),
-		gutil         = require('gulp-util' ),
-		imagemin         = require('gulp-imagemin' ),
-		sass          = require('gulp-sass'),
-		browsersync   = require('browser-sync'),
-		concat        = require('gulp-concat'),
-		uglify        = require('gulp-uglify'),
-		cleancss      = require('gulp-clean-css'),
-		rename        = require('gulp-rename'),
-		autoprefixer  = require('gulp-autoprefixer'),
-		notify        = require("gulp-notify"),
-		rigger        = require("gulp-rigger"),
-		rsync         = require('gulp-rsync');
+	gutil         = require('gulp-util' ),
+	imagemin         = require('gulp-imagemin' ),
+	browsersync   = require('browser-sync'),
+	concat        = require('gulp-concat'),
+	uglify        = require('gulp-uglify'),
+	cleancss      = require('gulp-clean-css'),
+	rename        = require('gulp-rename'),
+	autoprefixer  = require('gulp-autoprefixer'),
+	notify        = require("gulp-notify"),
+	rigger        = require("gulp-rigger"),
+	rsync         = require('gulp-rsync');
+const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 
 const config = {
@@ -42,15 +42,15 @@ gulp.task('browser-sync', function() {
 	})
 });
 
-gulp.task('styles', async function() {
+gulp.task('styles',  async function() {
 	gulp.src('app/'+syntax+'/**/*.'+syntax+'')
-	.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
-	.pipe(rename({ suffix: '.min', prefix : '' }))
-	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
-	// .pipe(gulp.dest('app/css'))
-	.pipe(gulp.dest('dist/css'))
-	.pipe(browserSync.stream())
+		.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
+		.pipe(rename({ suffix: '.min', prefix : '' }))
+		.pipe(autoprefixer(['last 2 versions', 'ie 10']))
+		// .pipe(cleancss( { })) // Opt., comment out when debugging
+		// .pipe(gulp.dest('app/css'))
+		.pipe(gulp.dest('dist/css'))
+		.pipe(browserSync.stream())
 });
 
 gulp.task('html', async function() {
@@ -105,36 +105,36 @@ gulp.task('fonts', async function () {
 gulp.task('js', async function() {
 	gulp.src([
 		'app/js/*.*', // Always at the end
-		])
-	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Mifify js (opt.)
-	// .pipe(gulp.dest('app/js'))
-	.pipe(gulp.dest('dist/js'))
-	.pipe(browserSync.stream())
+	])
+		.pipe(concat('scripts.min.js'))
+		// .pipe(uglify()) // Mifify js (opt.)
+		// .pipe(gulp.dest('app/js'))
+		.pipe(gulp.dest('dist/js'))
+		.pipe(browserSync.stream())
 });
 gulp.task('libs', async function() {
 	gulp.src([
 		'app/libs/*.*', // Always at the end
-		])
-	// .pipe(uglify()) // Mifify js (opt.)
-	// .pipe(gulp.dest('app/js'))
-	.pipe(gulp.dest('dist/libs'))
-	.pipe(browserSync.stream())
+	])
+		// .pipe(uglify()) // Mifify js (opt.)
+		// .pipe(gulp.dest('app/js'))
+		.pipe(gulp.dest('dist/libs'))
+		.pipe(browserSync.stream())
 });
 
 gulp.task('rsync', function() {
 	gulp.src('app/**')
-	.pipe(rsync({
-		root: 'app/',
-		hostname: 'username@yousite.com',
-		destination: 'yousite/public_html/',
-		// include: ['*.htaccess'], // Includes files to deploy
-		exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
-		recursive: true,
-		archive: true,
-		silent: false,
-		compress: true
-	}))
+		.pipe(rsync({
+			root: 'app/',
+			hostname: 'username@yousite.com',
+			destination: 'yousite/public_html/',
+			// include: ['*.htaccess'], // Includes files to deploy
+			exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
+			recursive: true,
+			archive: true,
+			silent: false,
+			compress: true
+		}))
 });
 
 // gulp.task('watch', gulp.parallel('styles', 'html', 'img', 'fonts', 'js', 'browser-sync'), function() {
