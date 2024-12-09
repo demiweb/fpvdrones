@@ -3452,6 +3452,15 @@
   }
   .item-tab .product-video-sld {
     max-width: 80%;
+    .product-main-slider {
+      .dots {
+        margin-top: vw(20px);
+        .single-dot {
+          width: vw(20px);
+          height: vw(20px);
+        }
+      }
+    }
   }
 }
 

@@ -204,8 +204,8 @@
       position: relative;
 
       &::before {
-        width: 14px;
-        height: 14px;
+        width: vw(14px);
+        height: vw(14px);
         display: inline-block;
         content: '';
         position: absolute;
@@ -260,7 +260,7 @@
         font-weight: 300;
         font-size: vw(12px);
         line-height: 1;
-        text-transform: uppercase;
+        //text-transform: uppercase;
         color: $black;
         display: flex;
         align-items: center;
@@ -521,6 +521,11 @@
       align-items: center;
       justify-content: flex-start;
       gap: vw(6px);
+      color: #272938;
+      padding-left: vw(10px);
+      padding-right: vw(10px);
+      border-radius: 4px;
+      background:  #E6FFBA;
 
       &::after {
         width: vw(9px);
@@ -531,6 +536,7 @@
         transform: rotate(-90deg);
         background: url("../img/arr-w-b.svg") no-repeat center / 100%;
         transition: all 0.3s ease-in-out;
+        filter: brightness(0);
       }
     }
   }
@@ -4455,13 +4461,18 @@
     overflow: hidden;
     cursor: pointer;
 
-    img, video, iframe {
+    img,  video, iframe{
       width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
       left: 0;
       object-fit: cover;
+    }
+    video, iframe {
+      height: 60%;
+      top: 50%;
+      transform: translate(0, -50%);
     }
   }
 }
@@ -5319,7 +5330,7 @@
   padding: 5.3646vw 0 2.6042vw;
 
   .container {
-    max-width: vw(1430px);
+    //max-width: vw(1430px);
   }
 }
 
@@ -6783,7 +6794,7 @@
 
   .btn {
     border-radius: vw(50px);
-    height: 34px;
+    height: vw(34px);
     padding: 0.2604vw 2.0833vw;
     position: relative;
     z-index: 2;
@@ -7637,6 +7648,11 @@ legend {
 
 
   .category-left {
+    .ocf-theme-light-block .ocf-selected-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: none;
+    }
     .ocf-header {
       height: vw(50px);
       margin-bottom: vw(26px);
@@ -7703,6 +7719,8 @@ legend {
     }
 
     .ocf-footer {
+      margin-left: 0;
+      margin-right: 0;
       .ocf-btn-link {
         font-size: vw(20px);
         color: #6E81BE;
@@ -7715,6 +7733,9 @@ legend {
         line-height: 1;
       }
     }
+  }
+  .ocf-container {
+    width: 100%;
   }
 }
 
@@ -7740,8 +7761,8 @@ legend {
   }
 
   &:hover {
-    background: #6E81BE;
-
+    background: #E6FFBA;
+    border-color: #E6FFBA;
     img {
       filter: brightness(0);
     }
@@ -7834,9 +7855,24 @@ legend {
     .fav {
       display: none;
     }
-
+    .product-main-slider {
+      .dots {
+        display: flex;
+        justify-content: center;
+        margin-top: vw(20px);
+        .single-dot {
+          width: vw(20px);
+          height: vw(20px);
+          background: #CACDD8;
+          &.active {
+            background: #6E81BE;
+          }
+        }
+      }
+    }
     .product-thumbs {
       position: relative;
+      display: none;
 
       .slider-btn {
         position: absolute;
@@ -7988,5 +8024,43 @@ legend {
       display: none;
 
     }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  @function vw($px-vw, $base-vw: 1440px) {
+    @return ($px-vw * 100vw) / $base-vw
+  }
+  .footer-bot .copyr, .footer-column > p, .header-top__menu-block ul li a, .footer-tabs .footer-tab ul li a, .footer-tabs .footer-tab ul li a, .header-top__menu > span, .header-top__left .time, .header-top__menu.header-top__menu--lang > span, .header-menu__step .inner-sub ul li a, .footer-column > ul li a {
+    font-size: vw(12px);
+  }
+  .header-top__menu.header-top__menu--number > span, .footer-column > span {
+    font-size: vw(14px);
+  }
+  .category-left .ocf-footer .ocf-search-btn-static {
+    font-size: vw(12px);
+  }
+  .category-left .ocf-footer .ocf-btn-link {
+    font-size: vw(12px);
+  }
+  .header-top__menu-block .works p, .header-top__menu-block .calls p {
+    font-size: vw(12px);
+  }
+  .header-top__menu-block .works small, .header-top__menu-block .works a:not(.btn), .header-top__menu-block .calls small, .header-top__menu-block .calls a:not(.btn) {
+    font-size: vw(12px);
+  }
+  .header-top__menu.header-top__menu--number .header-top__menu-block {
+    width: vw(160px);
+  }
+  .header-top__menu .btn {
+    font-size: vw(12px) !important;
+  }
+  .header-top__menu.header-top__menu--lang {
+    width: vw(39px);
+  }
+  .footer-column > p a {
+    font-size: vw(12px);
+  }
+  .our-mes a {
+    font-size: vw(12px);
   }
 }
