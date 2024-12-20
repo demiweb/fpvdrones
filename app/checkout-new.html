@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body class="home">
+//= details/header.html
+
+<main>
+
+
+    <section class="checkout-new">
+        <div class="container">
+            <div class="checkout-new__cont">
+                <div class="checkout-new__top">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><span>Оформлення замовлення</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="title-head">
+                        <span class="title">Оформлення замовлення</span>
+                    </div>
+                </div>
+                <div class="checkout-new__wrap">
+                    <div class="checkout-new__left">
+
+                        <span class="checkout-title">Доставка</span>
+                        <fieldset>
+                            <div class="checkout-new__part">
+                                <div class="checkout-new__radios">
+                                    <div class="checkout-new__radio">
+                                        <label for="del1">
+                                            <input type="radio" name="del1" id="del1" checked>
+                                            <span class="checkout-title">Нова пошта</span>
+                                            <div class="radio-block">
+                                                <div class="simplecheckout-block-content">
+                                                    <span class="checkout-title">Оберіть місто:</span>
+                                                    <div class="input-wrap">
+                                                        <input class="form-control" type="text"
+                                                               name="shipping_address[city]" id="shipping_address_city"
+                                                               value="" placeholder="" data-onchange="reloadAll"
+                                                               autocomplete="off">
+                                                    </div>
+                                                    <span class="checkout-title">Оберіть відділення :</span>
+                                                    <div class="input-wrap input-post">
+                                                        <input class="form-control" type="text"
+                                                               name="shipping_address[address_1]"
+                                                               id="shipping_address_address_1" value="" placeholder=""
+                                                               autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+
+
+                                    </div>
+                                    <div class="checkout-new__radio">
+                                        <label for="del1">
+                                            <input type="radio" name="del1" id="del2">
+                                            <span class="checkout-title">Самовивіз з магазину</span>
+                                            <div class="radio-block">
+                                                <div class="simplecheckout-block-content">
+                                                    <div class="loc">
+                                                        <div class="ic">
+                                                            <img src="./img/locnew.svg" alt="">
+                                                        </div>
+                                                        <p>м. Одеса, вул. Велика Арнаутська 61, офіс 48</p>
+                                                    </div>
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.2254226609816!2d30.735093310662542!3d46.47253646521827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63183028bb7a5%3A0x1fda0e2a930c10b0!2z0LLRg9C70LjRhtGPINCS0LXQu9C40LrQsCDQkNGA0L3QsNGD0YLRgdGM0LrQsCwgNjEsINCe0LTQtdGB0LAsINCe0LTQtdGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1suk!2sua!4v1734705486461!5m2!1suk!2sua"
+                                                            width="600" height="450" style="border:0;"
+                                                            allowfullscreen="" loading="lazy"
+                                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                </div>
+                                            </div>
+                                        </label>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </fieldset>
+                        <span class="checkout-title">Оплата</span>
+                        <fieldset>
+                            <div class="checkout-new__part">
+                                <div class="checkout-new__radios">
+                                    <div class="checkout-new__radio">
+                                        <label for="pay1">
+                                            <input type="radio" name="pay1" id="pay1" checked>
+                                            <span class="checkout-title">Оплата карткою, Applepay, GooglePay</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkout-new__radio">
+                                        <label for="pay1">
+                                            <input type="radio" name="pay1" id="pay2">
+                                            <span class="checkout-title">Оплата накладенним платежем</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <span class="checkout-title">Ваші контактні дані</span>
+
+                        <fieldset>
+                            <div class="checkout-new__part">
+                                <div class="form">
+                                    <div class="input-wrap">
+                                        <input type="text" placeholder="Прізвище">
+                                        <div class="simplecheckout-rule-group" style="display: none">Будь ласка,
+                                            заповніть всі обов'язкові поля
+                                        </div>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <input type="text" placeholder="Імя">
+                                        <div class="simplecheckout-rule-group" style="display: none">Будь ласка,
+                                            заповніть всі обов'язкові поля
+                                        </div>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <input type="text" placeholder="Email">
+                                        <div class="simplecheckout-rule-group" style="display: none">Будь ласка,
+                                            заповніть всі обов'язкові поля
+                                        </div>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <input type="text" placeholder="Телефон" data-simple-mask="+38 (999)-999-99-99">
+                                        <div class="simplecheckout-rule-group" style="display: none">Будь ласка,
+                                            заповніть всі обов'язкові поля
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="checkout-new__right">
+
+                        <span class="title">Підтвердити замовлення</span>
+                        <span class="checkout-title">Товар</span>
+                        <div class="checkout-new__items">
+                            <div class="single-cart">
+                                <a href="https://fpvua.com/fpv-dron-geprc-cinebot25-analog-elrs2-4g/" class="img">
+                                    <img src="https://fpvua.com/image/cachewebp/catalog/easyphoto/452/fpv-dron-geprc-cinebot25-analog-elrs2-4g-1-75x75.webp"
+                                         alt="FPV Дрон GEPRC Cinebot25 Analog ELRS2.4G">
+                                </a>
+                                <div class="txt">
+                                    <div class="tp">
+                                        <a href="https://fpvua.com/fpv-dron-geprc-cinebot25-analog-elrs2-4g/"
+                                           class="checkout-title">Meteor75 Pro Brushless Whoop Quadcopter</a>
+                                    </div>
+                                    <div class="bt">
+
+                                        <div class="quantity-field">
+                                            <div class="quantity__button quantity__button--minus js-minus">
+                                                <button type="button" class="">-</button>
+                                            </div>
+                                            <div class="quantity">
+                                                <label class="screen-reader-text" for="input-quantity-10428"></label>
+                                                <input type="number" id="input-quantity-10428"
+                                                       class="input-text qty text" value="1"
+                                                       onchange="updateCart(10428, $(this).val(), $(this).attr('data-quantity'));"
+                                                       data-quantity="1" size="4" min="0" max="1" step="1"
+                                                       placeholder="" inputmode="numeric" autocomplete="off">
+                                            </div>
+                                            <div class="quantity__button quantity__button--plus js-plus">
+                                                <button type="button" class="">+</button>
+                                            </div>
+                                        </div>
+
+                                        <p><strong>3 159 грн</strong>12920 грн</p>
+                                        <span class="remove-cart" onclick="cart.remove(10428);">×</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-total">
+                            <span>Всього до сплати :</span>
+                            <p>12920 грн</p>
+                        </div>
+                        <div class="checkout-new__promo">
+                            <p>Промокод :</p>
+                            <div class="checkout-promocode">
+                                <div class="inp">
+                                    <input type="text" data-onchange="reloadAll" name="coupon" value=""
+                                           placeholder="Ввести промокод">
+                                    <button class="btn btn--fill" data-onchange="reloadAll">активувати</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-new__bottom">
+                            <div class="input-wrap">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Коментар"></textarea>
+                            </div>
+                            <div class="checkout-new__radios">
+                                <div class="checkout-new__radio">
+                                    <label for="call1">
+                                        <input type="checkbox" name="call1" id="call1" checked>
+                                        <span class="checkout-title">Передзвоніть мені</span>
+                                    </label>
+                                </div>
+                                <div class="checkout-new__radio">
+                                    <label for="rule1">
+                                        <input type="checkbox" name="rule1" id="rule1">
+                                        <span class="checkout-title">Підтверджуючи замовлення я приймаю угоду користувача</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <a class="btn btn--fill" data-onclick="createOrder"
+                               id="simplecheckout_button_confirm"><span>Оформити замовлення</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<div class="modal-window modal-window__login" data-modal="login">
+    <div class="backplate">
+
+    </div>
+    <div class="modal-container">
+        <div class="modal-head">
+            <div class="modal-close">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="modal-cont">
+            <div class="auth-block auth-form">
+                <span>Авторизація</span>
+                <p>Якщо у вас є обліковий запис, увійдіть, використовуючи свою електронну адресу.</p>
+                <div class="form">
+                    <form action="">
+                        <div class="input-wrap">
+
+                            <input type="text" required placeholder="test@gmail.com">
+                            <label for="">Email</label>
+                        </div>
+                        <div class="input-wrap">
+
+                            <input type="password" required placeholder="********">
+                            <label for="">Пароль</label>
+                        </div>
+
+                        <div class="form-bot">
+                            <button class="btn btn--fill">Увійти</button>
+                            <a href="">Забули ваш пароль?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+//= details/footer.html
+
+//= details/scripts.html
+
+</body>
+</html>

@@ -463,7 +463,10 @@ function startProductSliders() {
             let sldNext = sld.querySelector('.slider-btn--next');
             let sldPrev = sld.querySelector('.slider-btn--prev');
             let pagin = sld.querySelector('.dots');
-
+            let ams = 4;
+            if (sld.closest('.more-complect__cont')) {
+                ams = 6;
+            }
             const swiper2 = new Swiper(sldCont, {
                 // Optional parameters
                 loop: false,
@@ -493,7 +496,7 @@ function startProductSliders() {
                 spaceBetween: 12,
                 breakpoints: {
                     767: {
-                        slidesPerView: 4,
+                        slidesPerView: ams,
                         spaceBetween: 20,
                     }
                 },
@@ -803,6 +806,7 @@ function controlMenu() {
         });
 
         if (window.innerWidth > 767) {
+            document.querySelector('.search-block').classList.add('open');
             menuControl.forEach((btn) => {
                 btn.closest('li').addEventListener('mouseover', () => {
                     btn.closest('li').classList.add('hov');
